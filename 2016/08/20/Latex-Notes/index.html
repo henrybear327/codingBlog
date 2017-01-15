@@ -1,0 +1,811 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/codingBlog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/codingBlog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/codingBlog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo,MathJex,Latex," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/codingBlog/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="Latex is a great way to express mathematical expressions in a clear and readable way, just like what you see in textbooks. The setup is tedious, and the usage is even messier.
+The following notes are">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Latex Notes">
+<meta property="og:url" content="https://henrybear327.github.io/2016/08/20/Latex-Notes/index.html">
+<meta property="og:site_name" content="Coding Notes">
+<meta property="og:description" content="Latex is a great way to express mathematical expressions in a clear and readable way, just like what you see in textbooks. The setup is tedious, and the usage is even messier.
+The following notes are">
+<meta property="og:updated_time" content="2016-08-21T16:01:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Latex Notes">
+<meta name="twitter:description" content="Latex is a great way to express mathematical expressions in a clear and readable way, just like what you see in textbooks. The setup is tedious, and the usage is even messier.
+The following notes are">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/codingBlog/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://henrybear327.github.io/2016/08/20/Latex-Notes/"/>
+
+
+
+
+
+  <title> Latex Notes | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/codingBlog/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Coding Notes</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle"></p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/codingBlog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/codingBlog/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/codingBlog/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2016/08/20/Latex-Notes/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Henry Tseng">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/codingBlog/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Coding Notes">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Coding Notes" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Latex Notes
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-20T02:02:59+08:00">
+                2016-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Latex is a great way to express mathematical expressions in a clear and readable way, just like what you see in textbooks. The setup is tedious, and the usage is even messier.</p>
+<p>The following notes are what I usually use for writing posts. Hope it can help you master Latex without the need to go through all pains that I have experienced.</p>
+<p>If you have problems or tips that you want to share, please comment under the post so I can help or discuss with you. :)</p>
+<a id="more"></a>
+<h1 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h1><ol>
+<li><code>npm install hexo-math --save</code></li>
+<li>In the folder that you need <code>MathJex</code>, execute the command <code>hexo math install</code></li>
+<li><p>Add the following line in the <code>_config.yml</code> file</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">plugins: hexo-math</div></pre></td></tr></table></figure>
+<p> If you have multiple plugins, add</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">plugins:</div><div class="line">- hexo-math</div><div class="line">- ...</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>Notice</strong>: if you work offline, the Latex won’t be rendered.</p>
+<h1 id="Usage-of-Latex-code-on-Hexo"><a href="#Usage-of-Latex-code-on-Hexo" class="headerlink" title="Usage of Latex code on Hexo"></a>Usage of Latex code on Hexo</h1><h2 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h2><p>Only for very basic stuff, such as pure variables and formulas.</p>
+<p><code>$a = b + c$</code> will be rendered as $a = b + c$.</p>
+<h2 id="Block"><a href="#Block" class="headerlink" title="Block"></a>Block</h2><p>Render Latex code on a newline.</p>
+<p><code>$$ velocity = \frac{distance}{time} $$</code> will be rendered as $$ velocity = \frac{distance}{time} $$</p>
+<h2 id="Rendering-issue"><a href="#Rendering-issue" class="headerlink" title="Rendering issue"></a>Rendering issue</h2><p>Try this… $x_k = x_1 - [ ( a_1 + a<em>2 + … + a</em>{k - 1} ) - (k - 1) \times avg]$. It fails because of the markdown engine rendering priority issue.</p>
+<p>So, instead of using <code>$$</code>, use<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% math %&#125;</div><div class="line">\begin&#123;aligned&#125;</div><div class="line">x_k = x_1 - [ ( a_1 + a_2 + ... + a_&#123;k - 1&#125; ) - (k - 1) \times avg]</div><div class="line">\end&#123;aligned&#125;</div><div class="line">&#123;% endmath %&#125;</div></pre></td></tr></table></figure></p>
+<p>The result will be very satisfying :)</p>
+<span>$$\begin{aligned}
+x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
+\end{aligned}$$</span><!-- Has MathJax -->
+<p>That’s why I mentioned <strong>basic stuff</strong> in the <code>inline</code> section. One hour wasted on this issue…</p>
+<h1 id="Latex-code-notes"><a href="#Latex-code-notes" class="headerlink" title="Latex code notes"></a><a href="http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference" target="_blank" rel="external">Latex code notes</a></h1><h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><h3 id="Plain-Text"><a href="#Plain-Text" class="headerlink" title="Plain Text"></a>Plain Text</h3><p>Use <code>\text{…}</code> for plain text. You can use <code>$$</code> within it.</p>
+<p><code>\text{Hello World! $x^2 = y^3$}</code> is $\text{Hello World! $x^2 = y^3$}$</p>
+<h3 id="Escape"><a href="#Escape" class="headerlink" title="Escape"></a>Escape</h3><p>Special characters used for MathJax interpreting can be escaped using the <code>\</code> character</p>
+<ul>
+<li><code>\$</code> is $\$$</li>
+<li><code>\{</code> is ${$</li>
+<li><code>\_</code> is $_$</li>
+</ul>
+<h3 id="Spacing"><a href="#Spacing" class="headerlink" title="Spacing"></a>Spacing</h3><p><code>This is a book</code> becomes $This is a book$. So we need to specify the spacing by using:</p>
+<ul>
+<li><code>\,</code> for thin space</li>
+<li><code>\;</code> for normal space</li>
+</ul>
+<p><code>This\, is\; a\; book</code> becomes $This\, is\; a\; book$</p>
+<h3 id="Superscripts-and-Subscripts"><a href="#Superscripts-and-Subscripts" class="headerlink" title="Superscripts and Subscripts"></a>Superscripts and Subscripts</h3><p>Use <code>^</code> for superscripts and <code>_</code> for subscripts. e.g. <code>x_i^2</code> is $x_i^2$</p>
+<p><em>Notice</em>: without <code>{}</code>, the <code>^</code> and <code>_</code> only apply to the next character only.</p>
+<h3 id="Group"><a href="#Group" class="headerlink" title="Group"></a>Group</h3><p>Superscripts, subscripts, and other operations apply only to the next “group” (use <code>{}</code> for grouping). For example, to represent 10 to the 10th power, you shouldn’t write…</p>
+<p><code>10^10</code> $10^10$</p>
+<p>You should write…</p>
+<p><code>10^{10}</code> $10^{10}$</p>
+<h3 id="Fraction"><a href="#Fraction" class="headerlink" title="Fraction"></a>Fraction</h3><ol>
+<li><code>\frac ab</code> is $\frac ab$</li>
+<li><code>\frac{a+1}{b+1}</code> is $\frac{a+1}{b+1}$</li>
+<li><code>{a+1\over b+1}</code> is ${a+1\over b+1}$</li>
+</ol>
+<h2 id="Special-Letters-and-Symbols"><a href="#Special-Letters-and-Symbols" class="headerlink" title="Special Letters and Symbols"></a>Special Letters and Symbols</h2><h3 id="Greek-Letters"><a href="#Greek-Letters" class="headerlink" title="Greek Letters"></a>Greek Letters</h3><ul>
+<li><code>alpha \beta \delta \Delta \gamma \Gamma \omega \Omega</code> is $\alpha \beta \delta \Delta \gamma \Gamma \omega \Omega$</li>
+<li><code>\epsilon \varepsilon \phi \varphi</code> is $\epsilon \varepsilon \phi \varphi$</li>
+</ul>
+<h3 id="Special-Symbol"><a href="#Special-Symbol" class="headerlink" title="Special Symbol"></a>Special Symbol</h3><ul>
+<li><code>\lt \gt \le \ge \neq</code> is $\lt \gt \le \ge \neq$</li>
+<li><code>\times \div \pm \mp \cdot</code> is $\times \div \pm \mp \cdot$</li>
+<li><code>\cup \cap \setminus \subset \subseteq \subsetneq \supset \in \notin \emptyset \varnothing</code> is $\cup \cap \setminus \subset \subseteq \subsetneq \supset \in \notin \emptyset \varnothing$</li>
+<li><code>\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto</code> is $\to \rightarrow \leftarrow \Rightarrow \Leftarrow \mapsto$</li>
+<li><code>\land \lor \lnot \forall \exists \top \bot \vdash \vDash</code> is $\land \lor \lnot \forall \exists \top \bot \vdash \vDash$</li>
+<li><code>\star \ast \oplus \circ \bullet</code> is $\star \ast \oplus \circ \bullet$</li>
+<li><code>\approx \sim \simeq \cong \equiv \prec \lhd</code> is $\approx \sim \simeq \cong \equiv \prec \lhd$</li>
+<li><code>a\equiv b\pmod n</code> is $a\equiv b\pmod n$</li>
+<li><code>\ldots</code> for $a1, a2, \ldots, an$, and <code>\cdots</code> for $a1 + a2 + \cdots + an$</li>
+<li><code>\hat x \bar x \overline x \vec x \overrightarrow {xy}</code> is $\hat x\; \bar x\; \overline x\; \vec x\; \overrightarrow {xy}$</li>
+</ul>
+<h3 id="Special-Function-trigonometry-limit-sqrt-sum"><a href="#Special-Function-trigonometry-limit-sqrt-sum" class="headerlink" title="Special Function: trigonometry, limit, sqrt, sum"></a>Special Function: trigonometry, limit, sqrt, sum</h3><ul>
+<li>Trigonometry<ul>
+<li><code>\sin x</code> is $\sin x$</li>
+<li><code>\cos x</code> is $\cos x$</li>
+<li><code>\tan x</code> is $\tan x$</li>
+</ul>
+</li>
+<li>Limits<ul>
+<li><code>\lim_{x\to 0}</code> is <span>$\lim_{x \to 0}$</span><!-- Has MathJax --></li>
+</ul>
+</li>
+<li>Square root<ul>
+<li><code>\sqrt{\frac xy}</code> is $\sqrt{\frac xy}$</li>
+<li><code>\sqrt[3]{\frac xy}</code> is $\sqrt[3]{\frac xy}$</li>
+</ul>
+</li>
+<li><p>Summation</p>
+<ul>
+<li><code>\sum_{i=0}^n i^2 = \frac{n(n+1)(2n+1)}{6}</code> is <span>$\sum_{i=0}^n i^2 = \frac{n(n+1)(2n+1)}{6}$</span><!-- Has MathJax --></li>
+<li><p>For multiline subscripts</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">\sum_&#123;\substack&#123;</div><div class="line">    0\le i\lt n\\</div><div class="line">    0\le j\lt m&#125;</div><div class="line">&#125;</div><div class="line">i^2+j^3</div></pre></td></tr></table></figure>
+<span>$$\sum_{\substack{
+    0\le i\lt n\\
+    0\le j\lt m}
+}
+i^2+j^3$$</span><!-- Has MathJax -->
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Equations-and-Functions"><a href="#Equations-and-Functions" class="headerlink" title="Equations and Functions"></a>Equations and Functions</h2><h3 id="System-of-Equations"><a href="#System-of-Equations" class="headerlink" title="System of Equations"></a>System of Equations</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">\begin&#123;cases&#125;</div><div class="line">a_1x+b_1y+c_1z=d_1 \\</div><div class="line">a_2x+b_2y+c_2z=d_2 \\</div><div class="line">a_3x+b_3y+c_3z=d_3</div><div class="line">\end&#123;cases&#125;</div></pre></td></tr></table></figure>
+<span>$$\begin{cases}
+a_1x+b_1y+c_1z=d_1 \\
+a_2x+b_2y+c_2z=d_2 \\
+a_3x+b_3y+c_3z=d_3
+\end{cases}$$</span><!-- Has MathJax -->
+<h3 id="Tagging-Equations"><a href="#Tagging-Equations" class="headerlink" title="Tagging Equations"></a>Tagging Equations</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;% math %&#125;</div><div class="line">\begin&#123;align*&#125;</div><div class="line">   a &amp;= p^2 - q^2 &amp;&amp;\text&#123;Equation note 1&#125; \tag 1\\</div><div class="line">   b &amp;= 2pq  &amp;&amp;\text&#123;Equation note 2&#125; \tag 2\\</div><div class="line">   c &amp;= p^2 + q^2 &amp;&amp;\text&#123;Equation note 3&#125; \tag 3\\</div><div class="line">\end&#123;align*&#125;</div><div class="line">&#123;% endmath %&#125;</div></pre></td></tr></table></figure>
+<span>$$\begin{align*}
+   a &amp;= p^2 - q^2 &amp;&amp;\text{Equation note 1} \tag 1\\
+   b &amp;= 2pq  &amp;&amp;\text{Equation note 2} \tag 2\\
+   c &amp;= p^2 + q^2 &amp;&amp;\text{Equation note 3} \tag 3\\
+\end{align*}$$</span><!-- Has MathJax -->
+<p><a href="http://tex.stackexchange.com/questions/159723/what-does-a-double-ampersand-mean-in-latex" target="_blank" rel="external">P.S.</a> <code>&amp;</code> is the cell separator in tabulars and similar constructions. A single <code>&amp;</code> means “go to the next cell of the alignment”, so <code>&amp;&amp;</code> means “the next cell is empty, go to the following one”.</p>
+<p>Check out <a href="https://cdn.mathjax.org/mathjax/latest/test/sample-eqnum.html" target="_blank" rel="external">here</a> for notes on aligning.</p>
+<h3 id="Pairwise-Functions"><a href="#Pairwise-Functions" class="headerlink" title="Pairwise Functions"></a>Pairwise Functions</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">f(n) =</div><div class="line">\begin&#123;cases&#125;</div><div class="line">n/2,  &amp; \text&#123;if $n$ is even&#125; \\</div><div class="line">3n+1, &amp; \text&#123;if $n$ is odd&#125;</div><div class="line">\end&#123;cases&#125;</div></pre></td></tr></table></figure>
+<span>$$f(n) =
+\begin{cases}
+n/2,  &amp; \text{if $n$ is even} \\
+3n+1, &amp; \text{if $n$ is odd}
+\end{cases}$$</span><!-- Has MathJax -->
+<h2 id="Matrix"><a href="#Matrix" class="headerlink" title="Matrix"></a>Matrix</h2><p>Basic version.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;% math %&#125;</div><div class="line">\begin&#123;aligned&#125;</div><div class="line">        \begin&#123;matrix&#125;</div><div class="line">        a &amp; b \\</div><div class="line">        0 &amp; 1 \\</div><div class="line">        \end&#123;matrix&#125;</div><div class="line">\end&#123;aligned&#125;</div><div class="line">&#123;% endmath %&#125;</div></pre></td></tr></table></figure>
+<span>$$\begin{aligned}
+        \begin{matrix}
+        a &amp; b \\
+        0 &amp; 1 \\
+        \end{matrix}
+\end{aligned}$$</span><!-- Has MathJax -->
+<p>Bracket matrix with <a href="http://tex.stackexchange.com/questions/114369/pmatrix-and-superscript" target="_blank" rel="external">exponent</a> associated with it.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;% math %&#125;</div><div class="line">\begin&#123;aligned&#125;</div><div class="line">        \begin&#123;bmatrix&#125;</div><div class="line">        a &amp; b \\</div><div class="line">        0 &amp; 1 \\</div><div class="line">        \end&#123;bmatrix&#125;^&#123;n&#125;</div><div class="line">\end&#123;aligned&#125;</div><div class="line">&#123;% endmath %&#125;</div></pre></td></tr></table></figure>
+<span>$$\begin{aligned}
+        \begin{bmatrix}
+        a &amp; b \\
+        0 &amp; 1 \\
+        \end{bmatrix}^{n}
+\end{aligned}$$</span><!-- Has MathJax -->
+<p>Two more kinds…</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;% math %&#125;</div><div class="line">\begin&#123;aligned&#125;</div><div class="line">        \begin&#123;pmatrix&#125;</div><div class="line">        a &amp; b \\</div><div class="line">        0 &amp; 1 \\</div><div class="line">        \end&#123;pmatrix&#125;^&#123;n&#125;</div><div class="line">\end&#123;aligned&#125;</div><div class="line">&#123;% endmath %&#125;</div></pre></td></tr></table></figure>
+<span>$$\begin{aligned}
+        \begin{pmatrix}
+        a &amp; b \\
+        0 &amp; 1 \\
+        \end{pmatrix}^{n}
+\end{aligned}$$</span><!-- Has MathJax -->
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;% math %&#125;</div><div class="line">\begin&#123;aligned&#125;</div><div class="line">        \begin&#123;vmatrix&#125;</div><div class="line">        a &amp; b \\</div><div class="line">        0 &amp; 1 \\</div><div class="line">        \end&#123;vmatrix&#125;^&#123;n&#125;</div><div class="line">\end&#123;aligned&#125;</div><div class="line">&#123;% endmath %&#125;</div></pre></td></tr></table></figure>
+<span>$$\begin{aligned}
+        \begin{vmatrix}
+        a &amp; b \\
+        0 &amp; 1 \\
+        \end{vmatrix}^{n}
+\end{aligned}$$</span><!-- Has MathJax -->
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/codingBlog/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/codingBlog/tags/MathJex/" rel="tag"># MathJex</a>
+          
+            <a href="/codingBlog/tags/Latex/" rel="tag"># Latex</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/codingBlog/2016/08/20/CF-Edu13-D/" rel="next" title="Codeforces Educational Round 13 Problem D">
+                <i class="fa fa-chevron-left"></i> Codeforces Educational Round 13 Problem D
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/codingBlog/2016/08/21/CF-R368-Div-C/" rel="prev" title="Codeforces Round 368 Div2 Problem C">
+                Codeforces Round 368 Div2 Problem C <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/codingBlog/images/avatar.gif"
+               alt="Henry Tseng" />
+          <p class="site-author-name" itemprop="name">Henry Tseng</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/codingBlog/archives">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/codingBlog/tags">
+                <span class="site-state-item-count">27</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Installation"><span class="nav-number">1.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Usage-of-Latex-code-on-Hexo"><span class="nav-number">2.</span> <span class="nav-text">Usage of Latex code on Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Inline"><span class="nav-number">2.1.</span> <span class="nav-text">Inline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Block"><span class="nav-number">2.2.</span> <span class="nav-text">Block</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Rendering-issue"><span class="nav-number">2.3.</span> <span class="nav-text">Rendering issue</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Latex-code-notes"><span class="nav-number">3.</span> <span class="nav-text">Latex code notes</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basics"><span class="nav-number">3.1.</span> <span class="nav-text">Basics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Plain-Text"><span class="nav-number">3.1.1.</span> <span class="nav-text">Plain Text</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Escape"><span class="nav-number">3.1.2.</span> <span class="nav-text">Escape</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spacing"><span class="nav-number">3.1.3.</span> <span class="nav-text">Spacing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Superscripts-and-Subscripts"><span class="nav-number">3.1.4.</span> <span class="nav-text">Superscripts and Subscripts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Group"><span class="nav-number">3.1.5.</span> <span class="nav-text">Group</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fraction"><span class="nav-number">3.1.6.</span> <span class="nav-text">Fraction</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Special-Letters-and-Symbols"><span class="nav-number">3.2.</span> <span class="nav-text">Special Letters and Symbols</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Greek-Letters"><span class="nav-number">3.2.1.</span> <span class="nav-text">Greek Letters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Special-Symbol"><span class="nav-number">3.2.2.</span> <span class="nav-text">Special Symbol</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Special-Function-trigonometry-limit-sqrt-sum"><span class="nav-number">3.2.3.</span> <span class="nav-text">Special Function: trigonometry, limit, sqrt, sum</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Equations-and-Functions"><span class="nav-number">3.3.</span> <span class="nav-text">Equations and Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#System-of-Equations"><span class="nav-number">3.3.1.</span> <span class="nav-text">System of Equations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tagging-Equations"><span class="nav-number">3.3.2.</span> <span class="nav-text">Tagging Equations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pairwise-Functions"><span class="nav-number">3.3.3.</span> <span class="nav-text">Pairwise Functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Matrix"><span class="nav-number">3.4.</span> <span class="nav-text">Matrix</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Henry Tseng</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/codingBlog/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/codingBlog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/codingBlog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/codingBlog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/codingBlog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/codingBlog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/codingBlog/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/codingBlog/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/codingBlog/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/codingBlog/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/codingBlog/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END --><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
