@@ -317,7 +317,10 @@
 
       
         
-          <h1 id="POJ3040"><a href="#POJ3040" class="headerlink" title="POJ3040"></a><a href="http://poj.org/problem?id=3040">POJ3040</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2>
+          <h1 id="POJ3040"><a href="#POJ3040" class="headerlink" title="POJ3040"></a><a href="http://poj.org/problem?id=3040">POJ3040</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>The sentence <code>each denomination of coin evenly divides the next-larger denomination</code> is a good lead for you to safely assume that using greedy strategy is fine.</p>
+<p>If the coin value is greater than $C$, then there is no need to combine two coins into one. Just distribute them out.</p>
+<p>For all other remaining coin values, use greedy strategy (just like coin change), and start with the largest coin value to try to get the total value as close to $C$ using minimal coins as possible. If the total value we can get is not exactly $C$, then we run the greedy algorithm from the smallest coin to the largest one. There is a little trick though, $min(\frac{remaining\ value + current\ coin\ value\ - 1}{current\ coin\ value}, all\ remaining\ coins\ for\ this\ coin\ value)$ can get you the minimal amount of coins by exceeding $C$ no more than the value of the minimal coin value that still have coins available.</p>
+<p>This <a href="https://gist.github.com/amoshyc/e74aee512a5448f5d75f">tutorial</a> have a casual prove on this method.</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/codingBlog/2017/01/15/POJ3040/#more" rel="contents">
