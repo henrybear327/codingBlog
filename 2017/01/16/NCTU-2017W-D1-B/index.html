@@ -68,7 +68,7 @@
 <link href="/codingBlog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Codeforces,Math,Sieve of Eratosthenes," />
+  <meta name="keywords" content="Codeforces,Game theory,Sprague Grundy Number," />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="CFEdu9D Longest SubsequenceSolution SketchIf a number $b$ can be divided by a number $a$, then this number $a$ can be contained in $b$’s LCM subsequence.
-Recall how we build up prime table using Sieve">
+<meta name="description" content="CF Lieges of LegendreSolution sketchWhen $k\ is\ odd$, $[0, 20]$ = {$0, 1, 0, 1, 2, 0, 2, 0, 1, 0, 1, 0, 1, 0, 1, 0, 2, 0, 1, 0, 2$}.So for $number &amp;lt;= 4$, the $sg\ value$ needs to be handled differ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces Educational Round 9 Problem D">
-<meta property="og:url" content="https://henrybear327.github.io/2016/08/19/CF-Edu9-D/index.html">
+<meta property="og:title" content="NCTU-2017W-D1-B">
+<meta property="og:url" content="https://henrybear327.github.io/2017/01/16/NCTU-2017W-D1-B/index.html">
 <meta property="og:site_name" content="Coding Notes">
-<meta property="og:description" content="CFEdu9D Longest SubsequenceSolution SketchIf a number $b$ can be divided by a number $a$, then this number $a$ can be contained in $b$’s LCM subsequence.
-Recall how we build up prime table using Sieve">
-<meta property="og:updated_time" content="2016-08-21T14:50:13.000Z">
+<meta property="og:description" content="CF Lieges of LegendreSolution sketchWhen $k\ is\ odd$, $[0, 20]$ = {$0, 1, 0, 1, 2, 0, 2, 0, 1, 0, 1, 0, 1, 0, 1, 0, 2, 0, 1, 0, 2$}.So for $number &amp;lt;= 4$, the $sg\ value$ needs to be handled differ">
+<meta property="og:updated_time" content="2017-01-16T13:53:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Codeforces Educational Round 9 Problem D">
-<meta name="twitter:description" content="CFEdu9D Longest SubsequenceSolution SketchIf a number $b$ can be divided by a number $a$, then this number $a$ can be contained in $b$’s LCM subsequence.
-Recall how we build up prime table using Sieve">
+<meta name="twitter:title" content="NCTU-2017W-D1-B">
+<meta name="twitter:description" content="CF Lieges of LegendreSolution sketchWhen $k\ is\ odd$, $[0, 20]$ = {$0, 1, 0, 1, 2, 0, 2, 0, 1, 0, 1, 0, 1, 0, 1, 0, 2, 0, 1, 0, 2$}.So for $number &amp;lt;= 4$, the $sg\ value$ needs to be handled differ">
 
 
 
@@ -124,13 +121,13 @@ Recall how we build up prime table using Sieve">
 
 
 
-  <link rel="canonical" href="https://henrybear327.github.io/2016/08/19/CF-Edu9-D/"/>
+  <link rel="canonical" href="https://henrybear327.github.io/2017/01/16/NCTU-2017W-D1-B/"/>
 
 
 
 
 
-  <title> Codeforces Educational Round 9 Problem D | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> NCTU-2017W-D1-B | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -243,7 +240,7 @@ Recall how we build up prime table using Sieve">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2016/08/19/CF-Edu9-D/">
+  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/16/NCTU-2017W-D1-B/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Henry Tseng">
@@ -267,7 +264,7 @@ Recall how we build up prime table using Sieve">
             
             
               
-                Codeforces Educational Round 9 Problem D
+                NCTU-2017W-D1-B
               
             
           </h1>
@@ -282,8 +279,8 @@ Recall how we build up prime table using Sieve">
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-19T19:23:57+08:00">
-                2016-08-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-16T21:41:14+08:00">
+                2017-01-16
               </time>
             
 
@@ -318,10 +315,9 @@ Recall how we build up prime table using Sieve">
       
 
       
-        <h1 id="CFEdu9D-Longest-Subsequence"><a href="#CFEdu9D-Longest-Subsequence" class="headerlink" title="CFEdu9D Longest Subsequence"></a><a href="http://codeforces.com/contest/632/problem/D" target="_blank" rel="external">CFEdu9D Longest Subsequence</a></h1><h2 id="Solution-Sketch"><a href="#Solution-Sketch" class="headerlink" title="Solution Sketch"></a>Solution Sketch</h2><p>If a number $b$ can be divided by a number $a$, then this number $a$ can be contained in $b$’s LCM subsequence.</p>
-<p>Recall how we build up prime table using <code>Sieve of Eratosthenes</code>, we mark all multiples of a certain number $x$ if $x$ is a prime. We can use the same technique for this problem!</p>
-<a id="more"></a>
-<h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> n, m;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m);</div><div class="line"></div><div class="line">    <span class="keyword">int</span> inp[n];</div><div class="line">    <span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; cnt;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        <span class="keyword">int</span> tmp;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;tmp);</div><div class="line"></div><div class="line">        inp[i] = tmp;</div><div class="line">        <span class="keyword">if</span> (tmp &lt;= m) <span class="comment">// major performace improvement</span></div><div class="line">            cnt[tmp]++;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> res[m + <span class="number">1</span>];</div><div class="line">    <span class="built_in">memset</span>(res, <span class="number">0</span>, <span class="keyword">sizeof</span>(res));</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> i : cnt) &#123;</div><div class="line">        <span class="keyword">if</span> (i.first &gt; m)</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        <span class="keyword">if</span> (i.second == <span class="number">0</span>)</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i.first; j &lt;= m; j += i.first) &#123;</div><div class="line">            res[j] += i.second;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> mx = <span class="number">0</span>, num = <span class="number">-1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= m; i++) &#123;</div><div class="line">        <span class="comment">// lcm many not be in cnt!! a * b &lt; m will be fine!</span></div><div class="line">        <span class="keyword">if</span> (mx &lt; res[i]) &#123;</div><div class="line">            num = i;</div><div class="line">            mx = res[i];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (num == <span class="number">-1</span>) &#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"1 0\n"</span>);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, num, mx);</div><div class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ans;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (num % inp[i] == <span class="number">0</span>) &#123;</div><div class="line">                ans.push_back(i + <span class="number">1</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        sort(ans.begin(), ans.end());</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> i : ans)</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>, i);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h1 id="CF-Lieges-of-Legendre"><a href="#CF-Lieges-of-Legendre" class="headerlink" title="CF Lieges of Legendre"></a><a href="http://codeforces.com/contest/604/problem/E" target="_blank" rel="external">CF Lieges of Legendre</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>When $k\ is\ odd$, $[0, 20]$ = {$0, 1, 0, 1, 2, 0, 2, 0, 1, 0, 1, 0, 1, 0, 1, 0, 2, 0, 1, 0, 2$}.<br>So for $number &lt;= 4$, the $sg\ value$ needs to be handled differently. For all other numbers, if it is odd, $sg\ value = 0$, otherwise, $sg\ value = (sg\ value\ of (\frac{number}{2}) == 1 ? 2 : 1)$.</p>
+<p>When $k\ is\ even$, $[0, 8]$ = {$0, 1, 2, 0, 1, 0, 1, 0, 1…$}. So for $number &lt; 3$, the $sg\ value$ needs to be handled differently. For all other numbers, $number \% 2 == 1 ? 0 : 1$.</p>
+<h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, k;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cal</span><span class="params">(<span class="keyword">int</span> num)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (k % <span class="number">2</span> == <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">if</span> (num &lt; <span class="number">3</span>)</div><div class="line">            <span class="keyword">return</span> num;</div><div class="line">        <span class="keyword">return</span> num % <span class="number">2</span> == <span class="number">1</span> ? <span class="number">0</span> : <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">if</span> (num &lt;= <span class="number">4</span>)</div><div class="line">            <span class="keyword">return</span> num == <span class="number">4</span> ? <span class="number">2</span> : num % <span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span> (num % <span class="number">2</span> == <span class="number">1</span>)</div><div class="line">            <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">        <span class="keyword">return</span> cal(num / <span class="number">2</span>) == <span class="number">1</span> ? <span class="number">2</span> : <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;k);</div><div class="line"></div><div class="line">    <span class="keyword">int</span> val = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        <span class="keyword">int</span> num;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num);</div><div class="line"></div><div class="line">        val ^= cal(num);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (val == <span class="number">0</span>)</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"Nicky\n"</span>);</div><div class="line">    <span class="keyword">else</span></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"Kevin\n"</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -347,9 +343,9 @@ Recall how we build up prime table using Sieve">
           
             <a href="/codingBlog/tags/Codeforces/" rel="tag"># Codeforces</a>
           
-            <a href="/codingBlog/tags/Math/" rel="tag"># Math</a>
+            <a href="/codingBlog/tags/Game-theory/" rel="tag"># Game theory</a>
           
-            <a href="/codingBlog/tags/Sieve-of-Eratosthenes/" rel="tag"># Sieve of Eratosthenes</a>
+            <a href="/codingBlog/tags/Sprague-Grundy-Number/" rel="tag"># Sprague Grundy Number</a>
           
         </div>
       
@@ -358,8 +354,8 @@ Recall how we build up prime table using Sieve">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/codingBlog/2016/08/18/UVA10600/" rel="next" title="UVA10600">
-                <i class="fa fa-chevron-left"></i> UVA10600
+              <a href="/codingBlog/2017/01/16/NCTU-2017W-D1-C/" rel="next" title="NCTU-2017W-D1-C">
+                <i class="fa fa-chevron-left"></i> NCTU-2017W-D1-C
               </a>
             
           </div>
@@ -367,10 +363,6 @@ Recall how we build up prime table using Sieve">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/codingBlog/2016/08/20/CF-Edu13-D/" rel="prev" title="Codeforces Educational Round 13 Problem D">
-                Codeforces Educational Round 13 Problem D <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -486,7 +478,7 @@ Recall how we build up prime table using Sieve">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CFEdu9D-Longest-Subsequence"><span class="nav-number">1.</span> <span class="nav-text">CFEdu9D Longest Subsequence</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-Sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution Sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CF-Lieges-of-Legendre"><span class="nav-number">1.</span> <span class="nav-text">CF Lieges of Legendre</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
             
 
           </div>
