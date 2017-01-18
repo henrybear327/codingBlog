@@ -68,7 +68,7 @@
 <link href="/codingBlog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Codeforces,Math," />
+  <meta name="keywords" content="POJ,Knapsack," />
 
 
 
@@ -84,31 +84,16 @@
 
 
 
-<meta name="description" content="CF707C Pythagorean TriplesSolution SketchUsing Euclid&amp;#39;s formula
-$$\begin{align*}
-   a&amp;amp; = p^2 - q^2  \tag 1\\
-   b&amp;amp; = 2pq  \tag 2\\
-   c&amp;amp; = p^2 + q^2 \tag 3\\
-\end{align*}$$">
+<meta name="description" content="Cash MachineSolution sketch有限背包問題，但是正常做會TLE QQ！（原理請看解說)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces Round 368 Div2 Problem C">
-<meta property="og:url" content="https://henrybear327.github.io/2016/08/21/CF-R368-Div-C/index.html">
+<meta property="og:title" content="POJ1742">
+<meta property="og:url" content="https://henrybear327.github.io/2017/01/18/POJ1742/index.html">
 <meta property="og:site_name" content="Coding Notes">
-<meta property="og:description" content="CF707C Pythagorean TriplesSolution SketchUsing Euclid&amp;#39;s formula
-$$\begin{align*}
-   a&amp;amp; = p^2 - q^2  \tag 1\\
-   b&amp;amp; = 2pq  \tag 2\\
-   c&amp;amp; = p^2 + q^2 \tag 3\\
-\end{align*}$$">
-<meta property="og:updated_time" content="2016-08-21T15:25:15.000Z">
+<meta property="og:description" content="Cash MachineSolution sketch有限背包問題，但是正常做會TLE QQ！（原理請看解說)">
+<meta property="og:updated_time" content="2017-01-18T08:09:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Codeforces Round 368 Div2 Problem C">
-<meta name="twitter:description" content="CF707C Pythagorean TriplesSolution SketchUsing Euclid&amp;#39;s formula
-$$\begin{align*}
-   a&amp;amp; = p^2 - q^2  \tag 1\\
-   b&amp;amp; = 2pq  \tag 2\\
-   c&amp;amp; = p^2 + q^2 \tag 3\\
-\end{align*}$$">
+<meta name="twitter:title" content="POJ1742">
+<meta name="twitter:description" content="Cash MachineSolution sketch有限背包問題，但是正常做會TLE QQ！（原理請看解說)">
 
 
 
@@ -136,13 +121,13 @@ $$\begin{align*}
 
 
 
-  <link rel="canonical" href="https://henrybear327.github.io/2016/08/21/CF-R368-Div-C/"/>
+  <link rel="canonical" href="https://henrybear327.github.io/2017/01/18/POJ1742/"/>
 
 
 
 
 
-  <title> Codeforces Round 368 Div2 Problem C | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> POJ1742 | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -255,7 +240,7 @@ $$\begin{align*}
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2016/08/21/CF-R368-Div-C/">
+  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/18/POJ1742/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Henry Tseng">
@@ -279,7 +264,7 @@ $$\begin{align*}
             
             
               
-                Codeforces Round 368 Div2 Problem C
+                POJ1742
               
             
           </h1>
@@ -294,8 +279,8 @@ $$\begin{align*}
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-21T08:42:59+08:00">
-                2016-08-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-18T16:04:53+08:00">
+                2017-01-18
               </time>
             
 
@@ -330,18 +315,9 @@ $$\begin{align*}
       
 
       
-        <h1 id="CF707C-Pythagorean-Triples"><a href="#CF707C-Pythagorean-Triples" class="headerlink" title="CF707C Pythagorean Triples"></a><a href="http://codeforces.com/contest/707/problem/C" target="_blank" rel="external">CF707C Pythagorean Triples</a></h1><h2 id="Solution-Sketch"><a href="#Solution-Sketch" class="headerlink" title="Solution Sketch"></a>Solution Sketch</h2><p>Using <code>Euclid&#39;s formula</code></p>
-<span>$$\begin{align*}
-   a&amp; = p^2 - q^2  \tag 1\\
-   b&amp; = 2pq  \tag 2\\
-   c&amp; = p^2 + q^2 \tag 3\\
-\end{align*}$$</span><!-- Has MathJax -->
+        <h1 id="Cash-Machine"><a href="#Cash-Machine" class="headerlink" title="Cash Machine"></a><a href="http://poj.org/problem?id=1276" target="_blank" rel="external">Cash Machine</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>有限背包問題，但是正常做會TLE QQ！（原理請看<a href="https://gist.github.com/amoshyc/c8bf4ce80ba6facdbb83" target="_blank" rel="external">解說</a>)</p>
 <a id="more"></a>
-<p>There are two special cases, $n = 1$ and $n = 2$, where the right triangle can’t be formed (plug in the numbers and you will see why).</p>
-<p>After eliminating special cases, we just need to deal with $n$ according to parity.</p>
-<p>If $n$ is <strong>odd</strong>, we can use $\text{equation $(1)$}$ and property<br>$$<br>\begin{align}<br>(k + 1)^2 - k^2 &amp;= 2k + 1 &amp;&amp;\text{the difference between two consecutive numbers’ square is odd}\tag 4<br>\end{align}<br>$$<br>We can get $k = \frac{n - 1}{2}$ (because $2k + 1 = n$), and then substitute $k$ with $\frac{n - 1}{2}$ in $\text{equation $(4)$}$ to obtain $q = \frac{n - 1}{2} + 1$ and $p = \frac{n - 1}{2}$. We can get the answers for odd from $\text{equation $(2)$ and equation $(3)$}$, which are $$2 (\frac{n - 1}{2} + 1) (\frac{n - 1}{2}) \;\text{and}\; (\frac{n - 1}{2} + 1)^2 + (\frac{n - 1}{2})^2$$</p>
-<p>If $n$ is <strong>even</strong>, we can use $\text{equation $(2)$}$ and let $q = 1$ (then $p = \frac n2$). We can the get the answers for even from $\text{equation $(1)$ and equation $(3)$}$, which are $$(\frac{n}{2})^2 - 1 \;\text{and}\; (\frac{n}{2})^2 + 1$$</p>
-<h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	ll n;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;n);</div><div class="line"></div><div class="line">	<span class="keyword">if</span>(n &lt;= <span class="number">2</span>)</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</div><div class="line">	<span class="keyword">else</span> &#123;</div><div class="line">		<span class="keyword">if</span>(n &amp; <span class="number">1</span>) &#123;</div><div class="line">			n = (n - <span class="number">1</span>) / <span class="number">2</span>;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%lld %lld\n"</span>, <span class="number">2</span> * (n + <span class="number">1</span>) * n, (n + <span class="number">1</span>) * (n + <span class="number">1</span>) + n * n);</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			n /= <span class="number">2</span>;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%lld %lld\n"</span>, n * n - <span class="number">1</span>, n * n + <span class="number">1</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">bool</span> ok[<span class="number">111111</span>];</div><div class="line"><span class="keyword">int</span> used[<span class="number">111111</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> n, m;</div><div class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m) == <span class="number">2</span> &amp;&amp; (n || m)) &#123;</div><div class="line">        <span class="keyword">int</span> val[n], cnt[n];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;val[i]);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;cnt[i]);</div><div class="line"></div><div class="line">        <span class="built_in">memset</span>(ok, <span class="number">0</span>, <span class="keyword">sizeof</span>(ok));</div><div class="line">        ok[<span class="number">0</span>] = <span class="literal">true</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123; <span class="comment">// 對於所有的硬幣種類一個一個看</span></div><div class="line">            <span class="built_in">memset</span>(used, <span class="number">0</span>, <span class="keyword">sizeof</span>(used));</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= m - val[i]; j++) &#123; <span class="comment">// 上限訂定為至少用一個硬幣的價值</span></div><div class="line">                <span class="keyword">int</span> next = j + val[i];</div><div class="line">                <span class="comment">// 如果目前這個數字已經可以湊出來，且還有剩餘的第i種硬幣可用，且利用一個第i種硬幣的那個值還未組出</span></div><div class="line">                <span class="keyword">if</span> (ok[j] == <span class="literal">true</span> &amp;&amp; cnt[i] - used[j] &gt; <span class="number">0</span> &amp;&amp; next &lt;= m &amp;&amp;</div><div class="line">                    ok[next] == <span class="literal">false</span>) &#123;</div><div class="line">                    ok[next] = <span class="literal">true</span>;</div><div class="line">                    used[next] = used[j] + <span class="number">1</span>;  <span class="comment">// 用一個硬幣掉</span></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= m; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (ok[i] == <span class="literal">true</span>)</div><div class="line">                ans++;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -365,9 +341,9 @@ $$\begin{align*}
       
         <div class="post-tags">
           
-            <a href="/codingBlog/tags/Codeforces/" rel="tag"># Codeforces</a>
+            <a href="/codingBlog/tags/POJ/" rel="tag"># POJ</a>
           
-            <a href="/codingBlog/tags/Math/" rel="tag"># Math</a>
+            <a href="/codingBlog/tags/Knapsack/" rel="tag"># Knapsack</a>
           
         </div>
       
@@ -376,8 +352,8 @@ $$\begin{align*}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/codingBlog/2016/08/20/Latex-Notes/" rel="next" title="Latex Notes">
-                <i class="fa fa-chevron-left"></i> Latex Notes
+              <a href="/codingBlog/2017/01/18/POJ1276/" rel="next" title="POJ1276">
+                <i class="fa fa-chevron-left"></i> POJ1276
               </a>
             
           </div>
@@ -385,10 +361,6 @@ $$\begin{align*}
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/codingBlog/2016/09/12/CF-R370-Div2-C/" rel="prev" title="Codeforces Round 370 Div2 Problem C">
-                Codeforces Round 370 Div2 Problem C <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -504,7 +476,7 @@ $$\begin{align*}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CF707C-Pythagorean-Triples"><span class="nav-number">1.</span> <span class="nav-text">CF707C Pythagorean Triples</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-Sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution Sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cash-Machine"><span class="nav-number">1.</span> <span class="nav-text">Cash Machine</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
             
 
           </div>
