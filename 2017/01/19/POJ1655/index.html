@@ -68,7 +68,7 @@
 <link href="/codingBlog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Math,UVa," />
+  <meta name="keywords" content="POJ,Tree,DP," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="UVa 11300 Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
+<meta name="description" content="Balancing ActSolution sketch在樹上做DP，基本上是挑一個點當作 root 開始 DFS。維護 連同節點$u$在內已經拜訪過的子樹結點總數 和 拔掉節點$u$後最大的子數大小，就可以求出答案。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UVa11300">
-<meta property="og:url" content="https://henrybear327.github.io/2016/08/09/UVA11300/index.html">
+<meta property="og:title" content="POJ1655">
+<meta property="og:url" content="https://henrybear327.github.io/2017/01/19/POJ1655/index.html">
 <meta property="og:site_name" content="Coding Notes">
-<meta property="og:description" content="UVa 11300 Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
-<meta property="og:updated_time" content="2016-08-21T15:10:51.000Z">
+<meta property="og:description" content="Balancing ActSolution sketch在樹上做DP，基本上是挑一個點當作 root 開始 DFS。維護 連同節點$u$在內已經拜訪過的子樹結點總數 和 拔掉節點$u$後最大的子數大小，就可以求出答案。">
+<meta property="og:updated_time" content="2017-01-19T06:27:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UVa11300">
-<meta name="twitter:description" content="UVa 11300 Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
+<meta name="twitter:title" content="POJ1655">
+<meta name="twitter:description" content="Balancing ActSolution sketch在樹上做DP，基本上是挑一個點當作 root 開始 DFS。維護 連同節點$u$在內已經拜訪過的子樹結點總數 和 拔掉節點$u$後最大的子數大小，就可以求出答案。">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://henrybear327.github.io/2016/08/09/UVA11300/"/>
+  <link rel="canonical" href="https://henrybear327.github.io/2017/01/19/POJ1655/"/>
 
 
 
 
 
-  <title> UVa11300 | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> POJ1655 | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -240,7 +240,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2016/08/09/UVA11300/">
+  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/19/POJ1655/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Henry Tseng">
@@ -264,7 +264,7 @@
             
             
               
-                UVa11300
+                POJ1655
               
             
           </h1>
@@ -279,8 +279,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-09T01:47:00+08:00">
-                2016-08-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-19T14:22:57+08:00">
+                2017-01-19
               </time>
             
 
@@ -315,18 +315,9 @@
       
 
       
-        <h1 id="UVa-11300-Spreading-the-Wealth"><a href="#UVa-11300-Spreading-the-Wealth" class="headerlink" title="UVa 11300 Spreading the Wealth"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;category=&amp;problem=2275&amp;mosmsg=Submission+received+with+ID+17807095" target="_blank" rel="external">UVa 11300 Spreading the Wealth</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>For every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.</p>
+        <h1 id="Balancing-Act"><a href="#Balancing-Act" class="headerlink" title="Balancing Act"></a><a href="http://poj.org/problem?id=1655" target="_blank" rel="external">Balancing Act</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>在樹上做DP，基本上是挑一個點當作 root 開始 DFS。維護 連同節點$u$在內已經拜訪過的子樹結點總數 和 拔掉節點$u$後最大的子數大小，就可以求出答案。</p>
 <a id="more"></a>
-<p>Let’s define the number of coins of each person as $a_1$, $a_2$, …, $a_n$, and the final state as $avg = \frac{sum\ of\ coins}{n}$.</p>
-<p>We know that $a_1$ must end up being $avg$, by subtracting the coins he transferred to his left, and adding the coins transferred to him from the right. Thus, we can get<br>$$a_1 - x_1 + x_2 = avg$$<br>Rewrite the equation<br>$$<br>\begin{equation}<br>x_2 = x_1 - (a_1 - avg)<br>\end{equation}<br>$$</p>
-<p>We also know that $a_2$ must end up being $avg$, so we can get<br>$$a_2 - x_2 + x_3 = avg$$<br>Rewrite the equation<br>$$<br>\begin{equation}<br>x_3 = x_2 - (a_2 - avg)<br>\end{equation}<br>$$<br>Substitute $x_2$ in equation 2 by using equation 1, we can get<br>$$x_3 = x_1 - [(a_1 + a_2) - 2 \times avg]$$</p>
-<p>Continue on doing this operation for all remaining $a_k$, you will get the pattern like<br><span>$$\begin{aligned}
-x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
-\end{aligned}$$</span><!-- Has MathJax --></p>
-<p>One thing to notice is that the equation for $a_n$ is a special case, you can think about it :)</p>
-<hr>
-<p>Since we are solving for the smallest $|x_1| + |x_2| + |x_3| + … + |x_n|$, we can substitute all $x_k$ with the equations solved above and get something like $|x_1| + |x_1 - (a_1 - avg)| + |x_1 - [(a_1 + a_2) - 2 \times avg]| + …$. Observe that if we use <strong>median</strong> for $x_1$, we can get the minimal sum.</p>
-<h2 id="AC-code"><a href="#AC-code" class="headerlink" title="AC code"></a>AC code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n) == <span class="number">1</span>) &#123;</div><div class="line">        ll prefix[n], sum = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">            ll cur;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;cur);</div><div class="line">            sum += cur;</div><div class="line">            <span class="keyword">if</span> (i == n - <span class="number">1</span>)</div><div class="line">                <span class="keyword">break</span>;</div><div class="line"></div><div class="line">            prefix[i] = (i == <span class="number">0</span> ? cur : prefix[i - <span class="number">1</span>] + cur);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        ll avg = sum / n;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</div><div class="line">            prefix[i] -= (i + <span class="number">1</span>) * avg;</div><div class="line">        sort(prefix, prefix + n - <span class="number">1</span>);</div><div class="line"></div><div class="line">        ll mid = prefix[(n - <span class="number">1</span>) / <span class="number">2</span>];</div><div class="line"></div><div class="line">        ll res = llabs(mid);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</div><div class="line">            res += llabs(mid - prefix[i]);</div><div class="line"></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, res);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; g[<span class="number">22222</span>];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">add_edge</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span></span></div><div class="line">&#123;</div><div class="line">    g[u].push_back(v);</div><div class="line">    g[v].push_back(u);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">bool</span> seen[<span class="number">22222</span>];</div><div class="line"><span class="keyword">int</span> mx_size[<span class="number">22222</span>], num[<span class="number">22222</span>];</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> p)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">if</span> (seen[u])</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    seen[u] = <span class="literal">true</span>;</div><div class="line"></div><div class="line">    num[u] = <span class="number">1</span>; <span class="comment">// base case, see line 33</span></div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (<span class="keyword">int</span>)g[u].size(); i++) &#123;</div><div class="line">        <span class="keyword">int</span> v = g[u][i];</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (v == p)</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        dfs(v, u);</div><div class="line"></div><div class="line">        mx_size[u] =</div><div class="line">            max(mx_size[u], num[v]); <span class="comment">// the subtree size below the current node u</span></div><div class="line">        num[u] += num[v]; <span class="comment">// the nodes visited so far under the current node u (including u itself)</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    mx_size[u] = max(mx_size[u], n - num[u]); <span class="comment">// the "subtree" above the current node u under current traversal sequence</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> ncase;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;ncase);</div><div class="line"></div><div class="line">    <span class="keyword">while</span> (ncase--) &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= n; i++)</div><div class="line">            g[i].clear();</div><div class="line"></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123;</div><div class="line">            <span class="keyword">int</span> u, v;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;u, &amp;v);</div><div class="line"></div><div class="line">            add_edge(u, v);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="built_in">memset</span>(seen, <span class="literal">false</span>, <span class="keyword">sizeof</span>(seen));</div><div class="line">        <span class="built_in">memset</span>(mx_size, <span class="number">0</span>, <span class="keyword">sizeof</span>(mx_size));</div><div class="line">        <span class="built_in">memset</span>(num, <span class="number">0</span>, <span class="keyword">sizeof</span>(num));</div><div class="line">        dfs(<span class="number">1</span>, <span class="number">-1</span>);</div><div class="line"></div><div class="line">        <span class="keyword">int</span> mn = <span class="number">22222</span>, idx = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (mn &gt; mx_size[i]) &#123;</div><div class="line">                idx = i;</div><div class="line">                mn = min(mn, mx_size[i]);</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="comment">// printf("%d %d\n", i, mx_size[i]);</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, idx, mn);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -350,9 +341,11 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
       
         <div class="post-tags">
           
-            <a href="/codingBlog/tags/Math/" rel="tag"># Math</a>
+            <a href="/codingBlog/tags/POJ/" rel="tag"># POJ</a>
           
-            <a href="/codingBlog/tags/UVa/" rel="tag"># UVa</a>
+            <a href="/codingBlog/tags/Tree/" rel="tag"># Tree</a>
+          
+            <a href="/codingBlog/tags/DP/" rel="tag"># DP</a>
           
         </div>
       
@@ -361,8 +354,8 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/codingBlog/2016/08/05/Hexo-Writing/" rel="next" title="How to write and publish articles on Hexo">
-                <i class="fa fa-chevron-left"></i> How to write and publish articles on Hexo
+              <a href="/codingBlog/2017/01/18/UVA10304/" rel="next" title="UVA10304">
+                <i class="fa fa-chevron-left"></i> UVA10304
               </a>
             
           </div>
@@ -370,10 +363,6 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/codingBlog/2016/08/12/CF-R367-Div-D/" rel="prev" title="Codeforces Round 367 Div2 Problem D">
-                Codeforces Round 367 Div2 Problem D <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -489,7 +478,7 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UVa-11300-Spreading-the-Wealth"><span class="nav-number">1.</span> <span class="nav-text">UVa 11300 Spreading the Wealth</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.2.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Balancing-Act"><span class="nav-number">1.</span> <span class="nav-text">Balancing Act</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
             
 
           </div>
