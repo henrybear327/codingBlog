@@ -68,7 +68,7 @@
 <link href="/codingBlog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Codeforces,Math," />
+  <meta name="keywords" content="HDU," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="CF701D As Fast As PossibleSolution SketchOne crucial observation is: all pupils must spend the same amount of time on bus, or the last student to arrive will need a longer time than the optimal soluti">
+<meta name="description" content="HUD 5443 The Water ProblemAC Code123456789101112131415161718192021222324252627282930313233343536373839#include &amp;lt;cstdio&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main()&amp;#123;	int ncase;	s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces Round 364 Div2 Problem D">
-<meta property="og:url" content="https://henrybear327.github.io/2016/08/04/CF-R364-Div2-D/index.html">
+<meta property="og:title" content="HUD5443">
+<meta property="og:url" content="https://henrybear327.github.io/2017/01/20/HUD5443/index.html">
 <meta property="og:site_name" content="Coding Notes">
-<meta property="og:description" content="CF701D As Fast As PossibleSolution SketchOne crucial observation is: all pupils must spend the same amount of time on bus, or the last student to arrive will need a longer time than the optimal soluti">
-<meta property="og:updated_time" content="2016-08-21T15:11:26.000Z">
+<meta property="og:description" content="HUD 5443 The Water ProblemAC Code123456789101112131415161718192021222324252627282930313233343536373839#include &amp;lt;cstdio&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main()&amp;#123;	int ncase;	s">
+<meta property="og:updated_time" content="2017-01-20T02:49:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Codeforces Round 364 Div2 Problem D">
-<meta name="twitter:description" content="CF701D As Fast As PossibleSolution SketchOne crucial observation is: all pupils must spend the same amount of time on bus, or the last student to arrive will need a longer time than the optimal soluti">
+<meta name="twitter:title" content="HUD5443">
+<meta name="twitter:description" content="HUD 5443 The Water ProblemAC Code123456789101112131415161718192021222324252627282930313233343536373839#include &amp;lt;cstdio&amp;gt;#include &amp;lt;algorithm&amp;gt;using namespace std;int main()&amp;#123;	int ncase;	s">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://henrybear327.github.io/2016/08/04/CF-R364-Div2-D/"/>
+  <link rel="canonical" href="https://henrybear327.github.io/2017/01/20/HUD5443/"/>
 
 
 
 
 
-  <title> Codeforces Round 364 Div2 Problem D | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> HUD5443 | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -240,7 +240,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2016/08/04/CF-R364-Div2-D/">
+  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/20/HUD5443/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Henry Tseng">
@@ -264,7 +264,7 @@
             
             
               
-                Codeforces Round 364 Div2 Problem D
+                HUD5443
               
             
           </h1>
@@ -279,8 +279,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-04T15:27:38+08:00">
-                2016-08-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-20T10:47:22+08:00">
+                2017-01-20
               </time>
             
 
@@ -315,18 +315,7 @@
       
 
       
-        <h1 id="CF701D-As-Fast-As-Possible"><a href="#CF701D-As-Fast-As-Possible" class="headerlink" title="CF701D As Fast As Possible"></a><a href="http://codeforces.com/contest/701/problem/D" target="_blank" rel="external">CF701D As Fast As Possible</a></h1><h2 id="Solution-Sketch"><a href="#Solution-Sketch" class="headerlink" title="Solution Sketch"></a>Solution Sketch</h2><p>One crucial observation is: all pupils must spend the same amount of time on bus, or the last student to arrive will need a longer time than the optimal solution.</p>
-<a id="more"></a>
-<ul>
-<li>p = groups to be taken by bus = <code>(n - 1) / k + 1</code></li>
-<li>t1 = time on foot</li>
-<li>t2 = time on bus</li>
-<li>t3 = time between the bus drop off one group of students and pick up anther group of students</li>
-</ul>
-<p>The diagram for the first two groups can be illustrated as followed:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">--------&gt; t2 * v2 (group 1 on the bus)</div><div class="line">      &lt;-- t3 * v2 (drop off group 1, and then the bus returned)</div><div class="line">      --------&gt; t2 * v2 (group 2 picked up by the bus)</div><div class="line">-----&gt; (t2 + t3) * v1 (group 2 time on foot)</div></pre></td></tr></table></figure></p>
-<p>From the above diagram, one can get 3 equations<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">t2 * v2 * p - t3 * v2 * (p - 1) = l</div><div class="line">t1 * v1 + t2 * v2 = l</div><div class="line">(t2 + t3) * v1 + t3 * v2 = t2 * v2</div></pre></td></tr></table></figure></p>
-<p>Solve the equations, you can get <code>t1</code>, <code>t2</code>, <code>t3</code>, where <code>t1 + t2</code> is the answer.</p>
-<h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; ii;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> EPS 1e-9</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    ll n, l, v1, v2, k;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%lld %lld %lld %lld %lld"</span>, &amp;n, &amp;l, &amp;v1, &amp;v2, &amp;k);</div><div class="line"></div><div class="line">	<span class="comment">// ll p = n / k + (n % k == 0 ? 0 : 1);</span></div><div class="line">	ll p = (n - <span class="number">1</span>) / k + <span class="number">1</span>;</div><div class="line">	<span class="keyword">double</span> t3 = (<span class="keyword">double</span>)((v2 - v1) * l) / (<span class="keyword">double</span>)(v2 * p * (v1 + v2) + (v1 - v2) * v2 * (p - <span class="number">1</span>));</div><div class="line">	<span class="keyword">double</span> t2 = (<span class="keyword">double</span>)(l + t3 * v2 * (p - <span class="number">1</span>)) / (v2 * p);</div><div class="line">	<span class="keyword">double</span> t1 = (<span class="keyword">double</span>)(l - t2 * v2) / v1;</div><div class="line"></div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%.15f\n"</span>, t1 + t2);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h1 id="HUD-5443-The-Water-Problem"><a href="#HUD-5443-The-Water-Problem" class="headerlink" title="HUD 5443 The Water Problem"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5443" target="_blank" rel="external">HUD 5443 The Water Problem</a></h1><h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> ncase;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;ncase);</div><div class="line"></div><div class="line"></div><div class="line">	<span class="keyword">while</span>(ncase--) &#123;</div><div class="line">		<span class="keyword">int</span> n;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line">		<span class="keyword">int</span> inp[n];</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;inp[i]);</div><div class="line"></div><div class="line">		<span class="keyword">int</span> q;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;q);</div><div class="line"></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; q; i++) &#123;</div><div class="line">			<span class="keyword">int</span> l, r;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;l, &amp;r);</div><div class="line">			l--;</div><div class="line">			r--;</div><div class="line"></div><div class="line">			<span class="keyword">int</span> mx = <span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = l; j &lt;= r; j++) &#123;</div><div class="line">				mx = max(mx, inp[j]);</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, mx);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -350,9 +339,7 @@
       
         <div class="post-tags">
           
-            <a href="/codingBlog/tags/Codeforces/" rel="tag"># Codeforces</a>
-          
-            <a href="/codingBlog/tags/Math/" rel="tag"># Math</a>
+            <a href="/codingBlog/tags/HDU/" rel="tag"># HDU</a>
           
         </div>
       
@@ -361,8 +348,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/codingBlog/2016/08/02/install-hexo-notes/" rel="next" title="Hexo Installation Notes">
-                <i class="fa fa-chevron-left"></i> Hexo Installation Notes
+              <a href="/codingBlog/2017/01/20/HUD5438/" rel="next" title="HUD5438">
+                <i class="fa fa-chevron-left"></i> HUD5438
               </a>
             
           </div>
@@ -370,10 +357,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/codingBlog/2016/08/05/CF-R365-Div2-C/" rel="prev" title="Codeforces Round 365 Div2 Problem C">
-                Codeforces Round 365 Div2 Problem C <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -489,7 +472,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CF701D-As-Fast-As-Possible"><span class="nav-number">1.</span> <span class="nav-text">CF701D As Fast As Possible</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-Sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution Sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HUD-5443-The-Water-Problem"><span class="nav-number">1.</span> <span class="nav-text">HUD 5443 The Water Problem</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.1.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
             
 
           </div>

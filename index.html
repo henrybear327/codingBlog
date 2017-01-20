@@ -238,6 +238,248 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/20/HUD5443/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Henry Tseng">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/codingBlog/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Coding Notes">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Coding Notes" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/codingBlog/2017/01/20/HUD5443/" itemprop="url">
+                  HUD5443
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-20T10:47:22+08:00">
+                2017-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="HUD-5443-The-Water-Problem"><a href="#HUD-5443-The-Water-Problem" class="headerlink" title="HUD 5443 The Water Problem"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5443" target="_blank" rel="external">HUD 5443 The Water Problem</a></h1><h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> ncase;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;ncase);</div><div class="line"></div><div class="line"></div><div class="line">	<span class="keyword">while</span>(ncase--) &#123;</div><div class="line">		<span class="keyword">int</span> n;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line">		<span class="keyword">int</span> inp[n];</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;inp[i]);</div><div class="line"></div><div class="line">		<span class="keyword">int</span> q;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;q);</div><div class="line"></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; q; i++) &#123;</div><div class="line">			<span class="keyword">int</span> l, r;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;l, &amp;r);</div><div class="line">			l--;</div><div class="line">			r--;</div><div class="line"></div><div class="line">			<span class="keyword">int</span> mx = <span class="number">0</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = l; j &lt;= r; j++) &#123;</div><div class="line">				mx = max(mx, inp[j]);</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, mx);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/20/HUD5438/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Henry Tseng">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/codingBlog/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Coding Notes">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Coding Notes" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/codingBlog/2017/01/20/HUD5438/" itemprop="url">
+                  HUD5438
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-20T10:46:19+08:00">
+                2017-01-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="HUD-5438-Ponds"><a href="#HUD-5438-Ponds" class="headerlink" title="HUD 5438 Ponds"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5438">HUD 5438 Ponds</a></h1><h2 id="Solution-Sketch"><a href="#Solution-Sketch" class="headerlink" title="Solution Sketch"></a>Solution Sketch</h2><p>Key: Use DFS and yank nodes with $total\ degree = 1$</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/codingBlog/2017/01/20/HUD5438/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/19/POJ1655/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1213,254 +1455,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/17/NCTU-2017W-D2-A/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Henry Tseng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/codingBlog/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Coding Notes">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Coding Notes" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/codingBlog/2017/01/17/NCTU-2017W-D2-A/" itemprop="url">
-                  NCTU-2017W-D2-A
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-17T14:24:50+08:00">
-                2017-01-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Gourmet-and-Banquet"><a href="#Gourmet-and-Banquet" class="headerlink" title="Gourmet and Banquet"></a><a href="http://codeforces.com/problemset/problem/589/F">Gourmet and Banquet</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>Construct the flow graph with 1 super source, 10000 time nodes, n dish nodes, and 1 super sink.</p>
-<p>Connect super source to all time nodes with cap 1. Connect dish’s time $[a_i, b_i)$ to dish’s node, with cap 1. Connect all dish nodes to the super sink with cap value from binary search.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/codingBlog/2017/01/17/NCTU-2017W-D2-A/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/16/NCTU-2017W-D1-B/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Henry Tseng">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/codingBlog/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Coding Notes">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Coding Notes" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/codingBlog/2017/01/16/NCTU-2017W-D1-B/" itemprop="url">
-                  NCTU-2017W-D1-B
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-16T21:41:14+08:00">
-                2017-01-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="CF-Lieges-of-Legendre"><a href="#CF-Lieges-of-Legendre" class="headerlink" title="CF Lieges of Legendre"></a><a href="http://codeforces.com/contest/604/problem/E">CF Lieges of Legendre</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>When $k\ is\ odd$, $[0, 20]$ = {$0, 1, 0, 1, 2, 0, 2, 0, 1, 0, 1, 0, 1, 0, 1, 0, 2, 0, 1, 0, 2$}.<br>So for $number &lt;= 4$, the $sg\ value$ needs to be handled differently. For all other numbers, if it is odd, $sg\ value = 0$, otherwise, $sg\ value = (sg\ value\ of (\frac{number}{2}) == 1 ? 2 : 1)$.</p>
-<p>When $k\ is\ even$, $[0, 8]$ = {$0, 1, 2, 0, 1, 0, 1, 0, 1…$}. So for $number &lt; 3$, the $sg\ value$ needs to be handled differently. For all other numbers, $number \% 2 == 1 ? 0 : 1$.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/codingBlog/2017/01/16/NCTU-2017W-D1-B/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1508,7 +1502,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/codingBlog/archives">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1519,7 +1513,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/codingBlog/tags">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">38</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
