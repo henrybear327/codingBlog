@@ -68,7 +68,7 @@
 <link href="/codingBlog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Math,UVa," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="UVa 11300 Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
+<meta name="description" content="POJ2376">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UVa11300">
-<meta property="og:url" content="https://henrybear327.github.io/2016/08/09/UVA11300/index.html">
+<meta property="og:title" content="POJ2376">
+<meta property="og:url" content="https://henrybear327.github.io/2017/04/14/POJ2376/index.html">
 <meta property="og:site_name" content="Coding Notes">
-<meta property="og:description" content="UVa 11300 Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
-<meta property="og:updated_time" content="2016-08-21T15:10:51.000Z">
+<meta property="og:description" content="POJ2376">
+<meta property="og:updated_time" content="2017-04-14T12:07:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UVa11300">
-<meta name="twitter:description" content="UVa 11300 Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
+<meta name="twitter:title" content="POJ2376">
+<meta name="twitter:description" content="POJ2376">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://henrybear327.github.io/2016/08/09/UVA11300/"/>
+  <link rel="canonical" href="https://henrybear327.github.io/2017/04/14/POJ2376/"/>
 
 
 
 
 
-  <title> UVa11300 | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> POJ2376 | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -240,7 +240,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2016/08/09/UVA11300/">
+  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/04/14/POJ2376/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Henry Tseng">
@@ -264,7 +264,7 @@
             
             
               
-                UVa11300
+                POJ2376
               
             
           </h1>
@@ -279,8 +279,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-09T01:47:00+08:00">
-                2016-08-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-14T20:06:09+08:00">
+                2017-04-14
               </time>
             
 
@@ -315,18 +315,8 @@
       
 
       
-        <h1 id="UVa-11300-Spreading-the-Wealth"><a href="#UVa-11300-Spreading-the-Wealth" class="headerlink" title="UVa 11300 Spreading the Wealth"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;category=&amp;problem=2275&amp;mosmsg=Submission+received+with+ID+17807095" target="_blank" rel="external">UVa 11300 Spreading the Wealth</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>For every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.</p>
-<a id="more"></a>
-<p>Let’s define the number of coins of each person as $a_1$, $a_2$, …, $a_n$, and the final state as $avg = \frac{sum\ of\ coins}{n}$.</p>
-<p>We know that $a_1$ must end up being $avg$, by subtracting the coins he transferred to his left, and adding the coins transferred to him from the right. Thus, we can get<br>$$a_1 - x_1 + x_2 = avg$$<br>Rewrite the equation<br>$$<br>\begin{equation}<br>x_2 = x_1 - (a_1 - avg)<br>\end{equation}<br>$$</p>
-<p>We also know that $a_2$ must end up being $avg$, so we can get<br>$$a_2 - x_2 + x_3 = avg$$<br>Rewrite the equation<br>$$<br>\begin{equation}<br>x_3 = x_2 - (a_2 - avg)<br>\end{equation}<br>$$<br>Substitute $x_2$ in equation 2 by using equation 1, we can get<br>$$x_3 = x_1 - [(a_1 + a_2) - 2 \times avg]$$</p>
-<p>Continue on doing this operation for all remaining $a_k$, you will get the pattern like<br><span>$$\begin{aligned}
-x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
-\end{aligned}$$</span><!-- Has MathJax --></p>
-<p>One thing to notice is that the equation for $a_n$ is a special case, you can think about it :)</p>
-<hr>
-<p>Since we are solving for the smallest $|x_1| + |x_2| + |x_3| + … + |x_n|$, we can substitute all $x_k$ with the equations solved above and get something like $|x_1| + |x_1 - (a_1 - avg)| + |x_1 - [(a_1 + a_2) - 2 \times avg]| + …$. Observe that if we use <strong>median</strong> for $x_1$, we can get the minimal sum.</p>
-<h2 id="AC-code"><a href="#AC-code" class="headerlink" title="AC code"></a>AC code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="keyword">int</span> ll;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n) == <span class="number">1</span>) &#123;</div><div class="line">        ll prefix[n], sum = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">            ll cur;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;cur);</div><div class="line">            sum += cur;</div><div class="line">            <span class="keyword">if</span> (i == n - <span class="number">1</span>)</div><div class="line">                <span class="keyword">break</span>;</div><div class="line"></div><div class="line">            prefix[i] = (i == <span class="number">0</span> ? cur : prefix[i - <span class="number">1</span>] + cur);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        ll avg = sum / n;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</div><div class="line">            prefix[i] -= (i + <span class="number">1</span>) * avg;</div><div class="line">        sort(prefix, prefix + n - <span class="number">1</span>);</div><div class="line"></div><div class="line">        ll mid = prefix[(n - <span class="number">1</span>) / <span class="number">2</span>];</div><div class="line"></div><div class="line">        ll res = llabs(mid);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</div><div class="line">            res += llabs(mid - prefix[i]);</div><div class="line"></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, res);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h1 id="POJ2376"><a href="#POJ2376" class="headerlink" title="POJ2376"></a><a href="http://poj.org/problem?id=2376" target="_blank" rel="external">POJ2376</a></h1><a id="more"></a>
+<h2 id="AC-code"><a href="#AC-code" class="headerlink" title="AC code"></a>AC code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; ii;</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line">   1 5</div><div class="line">   2 5</div><div class="line">   3 6</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> n, t;</div><div class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;t) == <span class="number">2</span>) &#123;</div><div class="line">        <span class="built_in">vector</span>&lt;ii&gt; inp;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">            <span class="keyword">int</span> a, b;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);</div><div class="line"></div><div class="line">            inp.push_back(ii(a, b));</div><div class="line">        &#125;</div><div class="line">        sort(inp.begin(), inp.end());</div><div class="line"></div><div class="line">        <span class="keyword">int</span> begin = <span class="number">1</span>, end = <span class="number">0</span>, ans = <span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (inp[i].first &lt;= begin || inp[i].second &lt;= end) &#123;</div><div class="line">                <span class="comment">// the starting point is &lt;= begin or the ending point in less than the</span></div><div class="line">                <span class="comment">// current ending point</span></div><div class="line">                <span class="keyword">if</span> (inp[i].second &gt; end) <span class="comment">// extend the end point as far as you can</span></div><div class="line">                    end = inp[i].second;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">if</span> (inp[i].first - end &lt;= <span class="number">1</span>) <span class="comment">// no gap between extended intervals</span></div><div class="line">                    ans++;</div><div class="line">                <span class="keyword">else</span> &#123;</div><div class="line">                    ans = <span class="number">-1</span>;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                begin = end + <span class="number">1</span>;</div><div class="line">                i--;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (end &lt; t) <span class="comment">// crucial</span></div><div class="line">            <span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -348,21 +338,13 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/codingBlog/tags/Math/" rel="tag"># Math</a>
-          
-            <a href="/codingBlog/tags/UVa/" rel="tag"># UVa</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/codingBlog/2016/08/05/Hexo-Writing/" rel="next" title="How to write and publish articles on Hexo">
-                <i class="fa fa-chevron-left"></i> How to write and publish articles on Hexo
+              <a href="/codingBlog/2017/03/30/POJ3484/" rel="next" title="POJ3484">
+                <i class="fa fa-chevron-left"></i> POJ3484
               </a>
             
           </div>
@@ -370,10 +352,6 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/codingBlog/2016/08/12/CF-R367-Div-D/" rel="prev" title="Codeforces Round 367 Div2 Problem D">
-                Codeforces Round 367 Div2 Problem D <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -489,7 +467,7 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UVa-11300-Spreading-the-Wealth"><span class="nav-number">1.</span> <span class="nav-text">UVa 11300 Spreading the Wealth</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.2.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#POJ2376"><span class="nav-number">1.</span> <span class="nav-text">POJ2376</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.1.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
             
 
           </div>
