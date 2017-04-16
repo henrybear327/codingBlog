@@ -68,7 +68,7 @@
 <link href="/codingBlog/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="POJ,Enumeration," />
+  <meta name="keywords" content="Tree,Graph," />
 
 
 
@@ -84,16 +84,22 @@
 
 
 
-<meta name="description" content="POJ3187Solution sketchNotice the $n = 1$ case…">
+<meta name="description" content="Bank HackingSolution sketch跟 binary search 無關，還有，時間複雜度如果亂估會以為會 TLE 的好題。
+這題題解寫得很清楚，我只補充一下我當初有另外想通的地方。
+為何只有 $m$, $m+1$, 和 $m+2$ 三種可能答案呢？因為這其實是一個 tree。所以說，如果我們把樹吊起來想，對於每個node來說，他至多就只可能被自己的parent和parent’s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="POJ3187">
-<meta property="og:url" content="https://henrybear327.github.io/2017/03/30/POJ3187/index.html">
+<meta property="og:title" content="CF-R408-Div2-C">
+<meta property="og:url" content="https://henrybear327.github.io/2017/04/16/CF-R408-Div2-C/index.html">
 <meta property="og:site_name" content="Coding Notes">
-<meta property="og:description" content="POJ3187Solution sketchNotice the $n = 1$ case…">
-<meta property="og:updated_time" content="2017-03-30T11:40:30.000Z">
+<meta property="og:description" content="Bank HackingSolution sketch跟 binary search 無關，還有，時間複雜度如果亂估會以為會 TLE 的好題。
+這題題解寫得很清楚，我只補充一下我當初有另外想通的地方。
+為何只有 $m$, $m+1$, 和 $m+2$ 三種可能答案呢？因為這其實是一個 tree。所以說，如果我們把樹吊起來想，對於每個node來說，他至多就只可能被自己的parent和parent’s">
+<meta property="og:updated_time" content="2017-04-16T09:14:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="POJ3187">
-<meta name="twitter:description" content="POJ3187Solution sketchNotice the $n = 1$ case…">
+<meta name="twitter:title" content="CF-R408-Div2-C">
+<meta name="twitter:description" content="Bank HackingSolution sketch跟 binary search 無關，還有，時間複雜度如果亂估會以為會 TLE 的好題。
+這題題解寫得很清楚，我只補充一下我當初有另外想通的地方。
+為何只有 $m$, $m+1$, 和 $m+2$ 三種可能答案呢？因為這其實是一個 tree。所以說，如果我們把樹吊起來想，對於每個node來說，他至多就只可能被自己的parent和parent’s">
 
 
 
@@ -121,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://henrybear327.github.io/2017/03/30/POJ3187/"/>
+  <link rel="canonical" href="https://henrybear327.github.io/2017/04/16/CF-R408-Div2-C/"/>
 
 
 
 
 
-  <title> POJ3187 | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> CF-R408-Div2-C | Coding Notes </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -240,7 +246,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/03/30/POJ3187/">
+  <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/04/16/CF-R408-Div2-C/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Henry Tseng">
@@ -264,7 +270,7 @@
             
             
               
-                POJ3187
+                CF-R408-Div2-C
               
             
           </h1>
@@ -279,8 +285,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-30T19:38:09+08:00">
-                2017-03-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-16T17:06:03+08:00">
+                2017-04-16
               </time>
             
 
@@ -315,9 +321,12 @@
       
 
       
-        <h1 id="POJ3187"><a href="#POJ3187" class="headerlink" title="POJ3187"></a><a href="http://poj.org/problem?id=3187" target="_blank" rel="external">POJ3187</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>Notice the $n = 1$ case…</p>
+        <h1 id="Bank-Hacking"><a href="#Bank-Hacking" class="headerlink" title="Bank Hacking"></a><a href="http://codeforces.com/contest/796/problem/C" target="_blank" rel="external">Bank Hacking</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>跟 binary search 無關，還有，時間複雜度如果亂估會以為會 TLE 的好題。</p>
+<p>這題<a href="http://codeforces.com/blog/entry/51527" target="_blank" rel="external">題解</a>寫得很清楚，我只補充一下我當初有另外想通的地方。</p>
+<p>為何只有 $m$, $m+1$, 和 $m+2$ 三種可能答案呢？因為這其實是一個 tree。所以說，如果我們把樹吊起來想，對於每個node來說，他至多就只可能被自己的parent和parent’s parent加到。</p>
+<p>實作上，就是先建立一個總數表（我是對於$m+2$建表）。對於所有的點枚舉，只處理自己和他的鄰居這兩層後，求取minimax。</p>
 <a id="more"></a>
-<h2 id="AC-code"><a href="#AC-code" class="headerlink" title="AC code"></a>AC code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> n, target;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;target);</div><div class="line"></div><div class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; seq;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        seq.push_back(i + <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">do</span> &#123;</div><div class="line">        <span class="keyword">int</span> prev[n];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</div><div class="line">            prev[i] = seq[i];</div><div class="line">        <span class="keyword">int</span> tmp[n];</div><div class="line">        tmp[<span class="number">0</span>] = prev[<span class="number">0</span>]; <span class="comment">// special case, n = 1</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = n; i &gt; <span class="number">1</span>; i--) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i - <span class="number">1</span>; j++) &#123;</div><div class="line">                tmp[j] = prev[j] + prev[j + <span class="number">1</span>];</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i - <span class="number">1</span>; j++)</div><div class="line">                prev[j] = tmp[j];</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (tmp[<span class="number">0</span>] == target) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</div><div class="line">                <span class="built_in">printf</span>(<span class="string">"%d%c"</span>, seq[i], i == n - <span class="number">1</span> ? <span class="string">'\n'</span> : <span class="string">' '</span>);</div><div class="line"></div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125; <span class="keyword">while</span> (next_permutation(seq.begin(), seq.end()));</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="AC-code"><a href="#AC-code" class="headerlink" title="AC code"></a>AC code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; ii;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; g[<span class="number">300010</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> n;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line"></div><div class="line">    <span class="keyword">int</span> inp[n];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;inp[i]);</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123;</div><div class="line">        <span class="keyword">int</span> u, v;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;u, &amp;v);</div><div class="line">        u--;</div><div class="line">        v--;</div><div class="line"></div><div class="line">        g[u].push_back(v);</div><div class="line">        g[v].push_back(u);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> ans = INT_MAX;</div><div class="line">    <span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; cnt;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        cnt[inp[i] + <span class="number">2</span>]++;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        <span class="built_in">stack</span>&lt;ii&gt; s;</div><div class="line"></div><div class="line">        <span class="comment">// self</span></div><div class="line">        cnt[inp[i]]++;</div><div class="line">        cnt[inp[i] + <span class="number">2</span>]--;</div><div class="line">        s.push(ii(inp[i], <span class="number">-1</span>));</div><div class="line">        s.push(ii(inp[i] + <span class="number">2</span>, <span class="number">1</span>));</div><div class="line"></div><div class="line">        <span class="comment">// neighbor</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> v : g[i]) &#123;</div><div class="line">            cnt[inp[v] + <span class="number">1</span>]++;</div><div class="line">            cnt[inp[v] + <span class="number">2</span>]--;</div><div class="line">            s.push(ii(inp[v] + <span class="number">1</span>, <span class="number">-1</span>));</div><div class="line">            s.push(ii(inp[v] + <span class="number">2</span>, <span class="number">1</span>));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">// update ans</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">auto</span> i = cnt.rbegin(); i != cnt.rend(); i++) &#123;</div><div class="line">            <span class="keyword">if</span> (i-&gt;second != <span class="number">0</span>) &#123;</div><div class="line">                ans = min(ans, i-&gt;first);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">while</span> (s.empty() == <span class="literal">false</span>) &#123;</div><div class="line">            ii cur = s.top();</div><div class="line">            s.pop();</div><div class="line"></div><div class="line">            cnt[cur.first] += cur.second;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -341,9 +350,9 @@
       
         <div class="post-tags">
           
-            <a href="/codingBlog/tags/POJ/" rel="tag"># POJ</a>
+            <a href="/codingBlog/tags/Tree/" rel="tag"># Tree</a>
           
-            <a href="/codingBlog/tags/Enumeration/" rel="tag"># Enumeration</a>
+            <a href="/codingBlog/tags/Graph/" rel="tag"># Graph</a>
           
         </div>
       
@@ -352,8 +361,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/codingBlog/2017/03/30/POJ2718/" rel="next" title="POJ2718">
-                <i class="fa fa-chevron-left"></i> POJ2718
+              <a href="/codingBlog/2017/04/14/POJ2376/" rel="next" title="POJ2376">
+                <i class="fa fa-chevron-left"></i> POJ2376
               </a>
             
           </div>
@@ -361,10 +370,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/codingBlog/2017/03/30/POJ3484/" rel="prev" title="POJ3484">
-                POJ3484 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -480,7 +485,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#POJ3187"><span class="nav-number">1.</span> <span class="nav-text">POJ3187</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.2.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Bank-Hacking"><span class="nav-number">1.</span> <span class="nav-text">Bank Hacking</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.2.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
             
 
           </div>
