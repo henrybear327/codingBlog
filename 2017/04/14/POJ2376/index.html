@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="POJ2376">
+<meta name="description" content="Cleaning Shifts">
 <meta property="og:type" content="article">
 <meta property="og:title" content="POJ2376">
 <meta property="og:url" content="https://henrybear327.github.io/2017/04/14/POJ2376/index.html">
 <meta property="og:site_name" content="程式隨筆">
-<meta property="og:description" content="POJ2376">
-<meta property="og:updated_time" content="2017-04-16T09:06:34.000Z">
+<meta property="og:description" content="Cleaning Shifts">
+<meta property="og:updated_time" content="2017-05-01T02:56:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="POJ2376">
-<meta name="twitter:description" content="POJ2376">
+<meta name="twitter:description" content="Cleaning Shifts">
 
 
 
@@ -309,6 +309,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">Competitive Programming</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/POJ/" itemprop="url" rel="index">
+                    <span itemprop="name">POJ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -333,7 +366,7 @@
       
 
       
-        <h1 id="POJ2376"><a href="#POJ2376" class="headerlink" title="POJ2376"></a><a href="http://poj.org/problem?id=2376" target="_blank" rel="external">POJ2376</a></h1><a id="more"></a>
+        <h1 id="Cleaning-Shifts"><a href="#Cleaning-Shifts" class="headerlink" title="Cleaning Shifts"></a><a href="http://poj.org/problem?id=2376" target="_blank" rel="external">Cleaning Shifts</a></h1><a id="more"></a>
 <h2 id="AC-code"><a href="#AC-code" class="headerlink" title="AC code"></a>AC code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; ii;</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line">   1 5</div><div class="line">   2 5</div><div class="line">   3 6</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> n, t;</div><div class="line">    <span class="keyword">while</span> (<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;t) == <span class="number">2</span>) &#123;</div><div class="line">        <span class="built_in">vector</span>&lt;ii&gt; inp;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">            <span class="keyword">int</span> a, b;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;a, &amp;b);</div><div class="line"></div><div class="line">            inp.push_back(ii(a, b));</div><div class="line">        &#125;</div><div class="line">        sort(inp.begin(), inp.end());</div><div class="line"></div><div class="line">        <span class="keyword">int</span> begin = <span class="number">1</span>, end = <span class="number">0</span>, ans = <span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (inp[i].first &lt;= begin || inp[i].second &lt;= end) &#123;</div><div class="line">                <span class="comment">// the starting point is &lt;= begin or the ending point in less than the</span></div><div class="line">                <span class="comment">// current ending point</span></div><div class="line">                <span class="keyword">if</span> (inp[i].second &gt; end) <span class="comment">// extend the end point as far as you can</span></div><div class="line">                    end = inp[i].second;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                <span class="keyword">if</span> (inp[i].first - end &lt;= <span class="number">1</span>) <span class="comment">// no gap between extended intervals</span></div><div class="line">                    ans++;</div><div class="line">                <span class="keyword">else</span> &#123;</div><div class="line">                    ans = <span class="number">-1</span>;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                begin = end + <span class="number">1</span>;</div><div class="line">                i--;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (end &lt; t) <span class="comment">// crucial</span></div><div class="line">            <span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, ans);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
@@ -389,8 +422,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/codingBlog/2017/04/14/POJ2376_DESKTOP-2QU4S8T_四月-17-235337-2017_Conflict/" rel="prev" title="POJ2376">
-                POJ2376 <i class="fa fa-chevron-right"></i>
+              <a href="/codingBlog/2017/04/16/CF-R408-Div2-C/" rel="prev" title="Codeforces Round 408 Div2 Problem C">
+                Codeforces Round 408 Div2 Problem C <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -463,7 +496,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/codingBlog/archives">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -474,7 +507,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/codingBlog/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -485,7 +518,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/codingBlog/tags/index.html">
-                <span class="site-state-item-count">52</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -520,7 +553,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#POJ2376"><span class="nav-number">1.</span> <span class="nav-text">POJ2376</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.1.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Cleaning-Shifts"><span class="nav-number">1.</span> <span class="nav-text">Cleaning Shifts</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.1.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
             
 
           </div>

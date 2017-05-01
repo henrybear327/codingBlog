@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="UVa 10765 Doves and bombsSolution SketchObserve the process of finding the articulation points. Keep count of how many times a node $u$ is being referred to as an articulation point. (Notice that the">
+<meta name="description" content="Doves and bombsSolution SketchObserve the process of finding the articulation points. Keep count of how many times a node $u$ is being referred to as an articulation point. (Notice that the edge to pa">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UVA10765">
+<meta property="og:title" content="UVa 10765">
 <meta property="og:url" content="https://henrybear327.github.io/2016/09/29/UVA10765/index.html">
 <meta property="og:site_name" content="程式隨筆">
-<meta property="og:description" content="UVa 10765 Doves and bombsSolution SketchObserve the process of finding the articulation points. Keep count of how many times a node $u$ is being referred to as an articulation point. (Notice that the">
-<meta property="og:updated_time" content="2016-09-29T03:22:43.000Z">
+<meta property="og:description" content="Doves and bombsSolution SketchObserve the process of finding the articulation points. Keep count of how many times a node $u$ is being referred to as an articulation point. (Notice that the edge to pa">
+<meta property="og:updated_time" content="2017-05-01T03:04:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UVA10765">
-<meta name="twitter:description" content="UVa 10765 Doves and bombsSolution SketchObserve the process of finding the articulation points. Keep count of how many times a node $u$ is being referred to as an articulation point. (Notice that the">
+<meta name="twitter:title" content="UVa 10765">
+<meta name="twitter:description" content="Doves and bombsSolution SketchObserve the process of finding the articulation points. Keep count of how many times a node $u$ is being referred to as an articulation point. (Notice that the edge to pa">
 
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <title>UVA10765 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>UVa 10765 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -283,7 +283,7 @@
             
             
               
-                UVA10765
+                UVa 10765
               
             
           </h1>
@@ -309,6 +309,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">Competitive Programming</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/UVa/" itemprop="url" rel="index">
+                    <span itemprop="name">UVa</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -333,7 +366,7 @@
       
 
       
-        <h1 id="UVa-10765-Doves-and-bombs"><a href="#UVa-10765-Doves-and-bombs" class="headerlink" title="UVa 10765 Doves and bombs"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=24&amp;page=show_problem&amp;problem=1706" target="_blank" rel="external">UVa 10765 Doves and bombs</a></h1><h2 id="Solution-Sketch"><a href="#Solution-Sketch" class="headerlink" title="Solution Sketch"></a>Solution Sketch</h2><p>Observe the process of finding the articulation points. Keep count of how many times a node $u$ is being referred to as an articulation point. (Notice that the edge to parent won’t be counted!)</p>
+        <h1 id="Doves-and-bombs"><a href="#Doves-and-bombs" class="headerlink" title="Doves and bombs"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=24&amp;page=show_problem&amp;problem=1706" target="_blank" rel="external">Doves and bombs</a></h1><h2 id="Solution-Sketch"><a href="#Solution-Sketch" class="headerlink" title="Solution Sketch"></a>Solution Sketch</h2><p>Observe the process of finding the articulation points. Keep count of how many times a node $u$ is being referred to as an articulation point. (Notice that the edge to parent won’t be counted!)</p>
 <h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 11111</span></div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; g[N];</div><div class="line"><span class="keyword">int</span> dfsTime[N], dfsLow[N], timer, root;</div><div class="line"><span class="keyword">int</span> articulationPoint[N];</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; ii;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> p)</span> </span>&#123;</div><div class="line">	<span class="comment">// printf("u %d p %d\n", u, p);</span></div><div class="line">	dfsTime[u] = dfsLow[u] = timer++;</div><div class="line"></div><div class="line">	<span class="keyword">int</span> child = <span class="number">0</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">auto</span> v : g[u]) &#123;</div><div class="line">		<span class="keyword">if</span>(v == p)</div><div class="line">			<span class="keyword">continue</span>;</div><div class="line"></div><div class="line">		<span class="keyword">if</span>(dfsTime[v] == <span class="number">0</span>) &#123;</div><div class="line">			child++;</div><div class="line">			<span class="comment">// printf("v %d\n", v);</span></div><div class="line">			dfs(v, u);</div><div class="line">			dfsLow[u] = min(dfsLow[u], dfsLow[v]);</div><div class="line"></div><div class="line">			<span class="keyword">if</span>(dfsTime[u] &lt;= dfsLow[v] &amp;&amp; u != root)</div><div class="line">				articulationPoint[u]++;</div><div class="line">			<span class="keyword">if</span>(root == u &amp;&amp; child &gt;= <span class="number">2</span>)</div><div class="line">				articulationPoint[root]++;</div><div class="line">			<span class="comment">// printf("pt %d %d\n", u, articulationPoint[u]);</span></div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			dfsLow[u] = min(dfsLow[u], dfsTime[v]);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(ii a, ii b)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span>(a.second == b.second)</div><div class="line">		<span class="keyword">return</span> a.first &lt; b.first;</div><div class="line">	<span class="keyword">return</span> a.second &gt; b.second;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> n, m;</div><div class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m) == <span class="number">2</span> &amp;&amp; (n || m)) &#123;</div><div class="line">		<span class="comment">// init</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</div><div class="line">			g[i].clear();</div><div class="line"></div><div class="line">		<span class="comment">// build graph</span></div><div class="line">		<span class="keyword">int</span> u, v;</div><div class="line">		<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;u, &amp;v) == <span class="number">2</span> &amp;&amp; (u != <span class="number">-1</span> &amp;&amp; v != <span class="number">-1</span>)) &#123;</div><div class="line">			g[u].push_back(v);</div><div class="line">			g[v].push_back(u);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="comment">// find articulation point</span></div><div class="line">		<span class="built_in">memset</span>(dfsTime, <span class="number">0</span>, <span class="keyword">sizeof</span>(dfsTime));</div><div class="line">		<span class="built_in">memset</span>(dfsLow, <span class="number">0</span>, <span class="keyword">sizeof</span>(dfsLow));</div><div class="line">		<span class="built_in">memset</span>(articulationPoint, <span class="number">0</span>, <span class="keyword">sizeof</span>(articulationPoint));</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">			<span class="keyword">if</span>(dfsTime[i] == <span class="number">0</span>) &#123;</div><div class="line">				timer = <span class="number">1</span>;</div><div class="line">				root = i;</div><div class="line">				dfs(i, <span class="number">-1</span>);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="built_in">vector</span>&lt;ii&gt; res;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> u = <span class="number">0</span>; u &lt; n; u++) &#123;</div><div class="line">			res.push_back(ii(u, articulationPoint[u] + <span class="number">1</span>));</div><div class="line">		&#125;</div><div class="line">		sort(res.begin(), res.end(), cmp);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++)</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, res[i].first, res[i].second);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
@@ -389,8 +422,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/codingBlog/2016/10/01/eclipseForJavaNeon/" rel="prev" title="Eclipse for Java">
-                Eclipse for Java <i class="fa fa-chevron-right"></i>
+              <a href="/codingBlog/2016/10/01/installLatexOnMac/" rel="prev" title="Install Latex On OSX Sierra">
+                Install Latex On OSX Sierra <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -463,7 +496,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/codingBlog/archives">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -474,7 +507,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/codingBlog/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -485,7 +518,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/codingBlog/tags/index.html">
-                <span class="site-state-item-count">52</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -520,7 +553,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UVa-10765-Doves-and-bombs"><span class="nav-number">1.</span> <span class="nav-text">UVa 10765 Doves and bombs</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-Sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution Sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Doves-and-bombs"><span class="nav-number">1.</span> <span class="nav-text">Doves and bombs</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-Sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution Sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
             
 
           </div>

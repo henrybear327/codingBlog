@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="UVa 11300 Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
+<meta name="description" content="Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UVa11300">
+<meta property="og:title" content="UVa 11300">
 <meta property="og:url" content="https://henrybear327.github.io/2016/08/09/UVA11300/index.html">
 <meta property="og:site_name" content="程式隨筆">
-<meta property="og:description" content="UVa 11300 Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
-<meta property="og:updated_time" content="2016-08-21T15:10:51.000Z">
+<meta property="og:description" content="Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
+<meta property="og:updated_time" content="2017-05-01T03:04:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UVa11300">
-<meta name="twitter:description" content="UVa 11300 Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
+<meta name="twitter:title" content="UVa 11300">
+<meta name="twitter:description" content="Spreading the WealthSolution sketchFor every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.">
 
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <title>UVa11300 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>UVa 11300 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -283,7 +283,7 @@
             
             
               
-                UVa11300
+                UVa 11300
               
             
           </h1>
@@ -309,6 +309,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">Competitive Programming</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/UVa/" itemprop="url" rel="index">
+                    <span itemprop="name">UVa</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -333,7 +366,7 @@
       
 
       
-        <h1 id="UVa-11300-Spreading-the-Wealth"><a href="#UVa-11300-Spreading-the-Wealth" class="headerlink" title="UVa 11300 Spreading the Wealth"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;category=&amp;problem=2275&amp;mosmsg=Submission+received+with+ID+17807095" target="_blank" rel="external">UVa 11300 Spreading the Wealth</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>For every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.</p>
+        <h1 id="Spreading-the-Wealth"><a href="#Spreading-the-Wealth" class="headerlink" title="Spreading the Wealth"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;category=&amp;problem=2275" target="_blank" rel="external">Spreading the Wealth</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>For every position $i$, we can define a variable $x_i$ which stores the number of coins that are being transferred from position $i + 1$ to $i$.</p>
 <a id="more"></a>
 <p>Let’s define the number of coins of each person as $a_1$, $a_2$, …, $a_n$, and the final state as $avg = \frac{sum\ of\ coins}{n}$.</p>
 <p>We know that $a_1$ must end up being $avg$, by subtracting the coins he transferred to his left, and adding the coins transferred to him from the right. Thus, we can get<br>$$a_1 - x_1 + x_2 = avg$$<br>Rewrite the equation<br>$$<br>\begin{equation}<br>x_2 = x_1 - (a_1 - avg)<br>\end{equation}<br>$$</p>
@@ -473,7 +506,7 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
           
             <div class="site-state-item site-state-posts">
               <a href="/codingBlog/archives">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -484,7 +517,7 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
             
             <div class="site-state-item site-state-categories">
               <a href="/codingBlog/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -495,7 +528,7 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
             
             <div class="site-state-item site-state-tags">
               <a href="/codingBlog/tags/index.html">
-                <span class="site-state-item-count">52</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -530,7 +563,7 @@ x_k = x_1 - [ ( a_1 + a_2 + ... + a_{k - 1} ) - (k - 1) \times avg]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UVa-11300-Spreading-the-Wealth"><span class="nav-number">1.</span> <span class="nav-text">UVa 11300 Spreading the Wealth</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.2.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spreading-the-Wealth"><span class="nav-number">1.</span> <span class="nav-text">Spreading the Wealth</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.2.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
             
 
           </div>

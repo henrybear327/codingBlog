@@ -90,19 +90,19 @@
 
 
 
-<meta name="description" content="POJ3040Solution sketchThe sentence each denomination of coin evenly divides the next-larger denomination is a good lead for you to safely assume that using greedy strategy is fine.
-If the coin value i">
+<meta name="description" content="Allowance Solution sketchThe sentence each denomination of coin evenly divides the next-larger denomination is a good lead for you to safely assume that using greedy strategy is fine.
+If the coin valu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="POJ3040">
 <meta property="og:url" content="https://henrybear327.github.io/2017/01/15/POJ3040/index.html">
 <meta property="og:site_name" content="程式隨筆">
-<meta property="og:description" content="POJ3040Solution sketchThe sentence each denomination of coin evenly divides the next-larger denomination is a good lead for you to safely assume that using greedy strategy is fine.
-If the coin value i">
-<meta property="og:updated_time" content="2017-01-15T15:23:56.000Z">
+<meta property="og:description" content="Allowance Solution sketchThe sentence each denomination of coin evenly divides the next-larger denomination is a good lead for you to safely assume that using greedy strategy is fine.
+If the coin valu">
+<meta property="og:updated_time" content="2017-05-01T02:56:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="POJ3040">
-<meta name="twitter:description" content="POJ3040Solution sketchThe sentence each denomination of coin evenly divides the next-larger denomination is a good lead for you to safely assume that using greedy strategy is fine.
-If the coin value i">
+<meta name="twitter:description" content="Allowance Solution sketchThe sentence each denomination of coin evenly divides the next-larger denomination is a good lead for you to safely assume that using greedy strategy is fine.
+If the coin valu">
 
 
 
@@ -312,6 +312,39 @@ If the coin value i">
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">Competitive Programming</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/POJ/" itemprop="url" rel="index">
+                    <span itemprop="name">POJ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -336,7 +369,7 @@ If the coin value i">
       
 
       
-        <h1 id="POJ3040"><a href="#POJ3040" class="headerlink" title="POJ3040"></a><a href="http://poj.org/problem?id=3040" target="_blank" rel="external">POJ3040</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>The sentence <code>each denomination of coin evenly divides the next-larger denomination</code> is a good lead for you to safely assume that using greedy strategy is fine.</p>
+        <h1 id="Allowance"><a href="#Allowance" class="headerlink" title="Allowance "></a><a href="http://poj.org/problem?id=3040" target="_blank" rel="external">Allowance </a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>The sentence <code>each denomination of coin evenly divides the next-larger denomination</code> is a good lead for you to safely assume that using greedy strategy is fine.</p>
 <p>If the coin value is greater than $C$, then there is no need to combine two coins into one. Just distribute them out.</p>
 <p>For all other remaining coin values, use greedy strategy (just like coin change), and start with the largest coin value to try to get the total value as close to $C$ using minimal coins as possible. If the total value we can get is not exactly $C$, then we run the greedy algorithm from the smallest coin to the largest one. There is a little trick though, $min(\frac{remaining\ value + current\ coin\ value\ - 1}{current\ coin\ value}, all\ remaining\ coins\ for\ this\ coin\ value)$ can get you the minimal amount of coins by exceeding $C$ no more than the value of the minimal coin value that still have coins available.</p>
 <p>This <a href="https://gist.github.com/amoshyc/e74aee512a5448f5d75f" target="_blank" rel="external">tutorial</a> have a casual prove on this method.</p>
@@ -470,7 +503,7 @@ If the coin value i">
           
             <div class="site-state-item site-state-posts">
               <a href="/codingBlog/archives">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -481,7 +514,7 @@ If the coin value i">
             
             <div class="site-state-item site-state-categories">
               <a href="/codingBlog/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -492,7 +525,7 @@ If the coin value i">
             
             <div class="site-state-item site-state-tags">
               <a href="/codingBlog/tags/index.html">
-                <span class="site-state-item-count">52</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -527,7 +560,7 @@ If the coin value i">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#POJ3040"><span class="nav-number">1.</span> <span class="nav-text">POJ3040</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.2.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Allowance"><span class="nav-number">1.</span> <span class="nav-text">Allowance </span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.2.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -90,16 +90,16 @@
 
 
 
-<meta name="description" content="UVA820Solution sketch用 Adjacency matrix 存圖後（因為點數很少），之後跑一次 Ford Fulkerson 即可。">
+<meta name="description" content="Internet BandwidthSolution sketch用 Adjacency matrix 存圖後（因為點數很少），之後跑一次 Ford Fulkerson 即可。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UVA820">
+<meta property="og:title" content="UVa 820">
 <meta property="og:url" content="https://henrybear327.github.io/2017/01/17/UVA820/index.html">
 <meta property="og:site_name" content="程式隨筆">
-<meta property="og:description" content="UVA820Solution sketch用 Adjacency matrix 存圖後（因為點數很少），之後跑一次 Ford Fulkerson 即可。">
-<meta property="og:updated_time" content="2017-05-01T02:43:09.000Z">
+<meta property="og:description" content="Internet BandwidthSolution sketch用 Adjacency matrix 存圖後（因為點數很少），之後跑一次 Ford Fulkerson 即可。">
+<meta property="og:updated_time" content="2017-05-01T03:03:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UVA820">
-<meta name="twitter:description" content="UVA820Solution sketch用 Adjacency matrix 存圖後（因為點數很少），之後跑一次 Ford Fulkerson 即可。">
+<meta name="twitter:title" content="UVa 820">
+<meta name="twitter:description" content="Internet BandwidthSolution sketch用 Adjacency matrix 存圖後（因為點數很少），之後跑一次 Ford Fulkerson 即可。">
 
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <title>UVA820 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>UVa 820 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -283,7 +283,7 @@
             
             
               
-                UVA820
+                UVa 820
               
             
           </h1>
@@ -309,6 +309,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">Competitive Programming</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/UVa/" itemprop="url" rel="index">
+                    <span itemprop="name">UVa</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -333,7 +366,7 @@
       
 
       
-        <h1 id="UVA820"><a href="#UVA820" class="headerlink" title="UVA820"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;category=24&amp;problem=761&amp;mosmsg=Submission+received+with+ID+18632882" target="_blank" rel="external">UVA820</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>用 Adjacency matrix 存圖後（因為點數很少），之後跑一次 Ford Fulkerson 即可。</p>
+        <h1 id="Internet-Bandwidth"><a href="#Internet-Bandwidth" class="headerlink" title="Internet Bandwidth"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;category=24&amp;problem=761" target="_blank" rel="external">Internet Bandwidth</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>用 Adjacency matrix 存圖後（因為點數很少），之後跑一次 Ford Fulkerson 即可。</p>
 <a id="more"></a>
 <h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, s, t, c;</div><div class="line"><span class="keyword">int</span> g[<span class="number">111</span>][<span class="number">111</span>];</div><div class="line"></div><div class="line"><span class="keyword">bool</span> seen[<span class="number">111</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v, <span class="keyword">int</span> c)</span></span></div><div class="line">&#123;</div><div class="line">	seen[u] = <span class="literal">true</span>;</div><div class="line">	<span class="keyword">if</span>(u == v)</div><div class="line">		<span class="keyword">return</span> c;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</div><div class="line">		<span class="keyword">if</span>(g[u][i] &gt; <span class="number">0</span> &amp;&amp; seen[i] == <span class="literal">false</span>) &#123;</div><div class="line">			<span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">			<span class="keyword">if</span>( (res = dfs(i, v, min(c, g[u][i]))) &gt; <span class="number">0</span>) &#123;</div><div class="line">				g[u][i] -= res;</div><div class="line">				g[i][u] += res;</div><div class="line">				<span class="keyword">return</span> res;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxflow</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> res = <span class="number">0</span>, tmp = <span class="number">0</span>;</div><div class="line">	<span class="built_in">memset</span>(seen, <span class="literal">false</span>, <span class="keyword">sizeof</span>(seen));</div><div class="line">	<span class="keyword">while</span>(( tmp = dfs(s, t, INT_MAX) ) &gt; <span class="number">0</span>) &#123;</div><div class="line">		res += tmp;</div><div class="line">		<span class="built_in">memset</span>(seen, <span class="literal">false</span>, <span class="keyword">sizeof</span>(seen));</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> id = <span class="number">1</span>;</div><div class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n) == <span class="number">1</span> &amp;&amp; n) &#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &amp;s, &amp;t, &amp;c);</div><div class="line"></div><div class="line">		<span class="built_in">memset</span>(g, <span class="number">0</span>, <span class="keyword">sizeof</span>(g));</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; c; i++) &#123;</div><div class="line">			<span class="keyword">int</span> u, v, w;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &amp;u, &amp;v, &amp;w);</div><div class="line"></div><div class="line">			g[u][v] += w;</div><div class="line">			g[v][u] += w;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="built_in">printf</span>(<span class="string">"Network %d\n"</span>, id++);</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"The bandwidth is %d.\n\n"</span>, maxflow());</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
@@ -464,7 +497,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/codingBlog/archives">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -475,7 +508,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/codingBlog/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -486,7 +519,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/codingBlog/tags/index.html">
-                <span class="site-state-item-count">52</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -521,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UVA820"><span class="nav-number">1.</span> <span class="nav-text">UVA820</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Internet-Bandwidth"><span class="nav-number">1.</span> <span class="nav-text">Internet Bandwidth</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
             
 
           </div>

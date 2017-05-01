@@ -90,19 +90,19 @@
 
 
 
-<meta name="description" content="UVA 10600 ACM Contest and BlackoutSolution SketchSuppose we have a set $S$ which represents all edges that are in MST, and a set $P$ represents all edges that are not in MST.
-The crucial observation f">
+<meta name="description" content="ACM Contest and BlackoutSolution SketchSuppose we have a set $S$ which represents all edges that are in MST, and a set $P$ represents all edges that are not in MST.
+The crucial observation for getting">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UVA10600">
+<meta property="og:title" content="UVa 10600">
 <meta property="og:url" content="https://henrybear327.github.io/2016/08/18/UVA10600/index.html">
 <meta property="og:site_name" content="程式隨筆">
-<meta property="og:description" content="UVA 10600 ACM Contest and BlackoutSolution SketchSuppose we have a set $S$ which represents all edges that are in MST, and a set $P$ represents all edges that are not in MST.
-The crucial observation f">
-<meta property="og:updated_time" content="2017-05-01T02:43:29.000Z">
+<meta property="og:description" content="ACM Contest and BlackoutSolution SketchSuppose we have a set $S$ which represents all edges that are in MST, and a set $P$ represents all edges that are not in MST.
+The crucial observation for getting">
+<meta property="og:updated_time" content="2017-05-01T03:04:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UVA10600">
-<meta name="twitter:description" content="UVA 10600 ACM Contest and BlackoutSolution SketchSuppose we have a set $S$ which represents all edges that are in MST, and a set $P$ represents all edges that are not in MST.
-The crucial observation f">
+<meta name="twitter:title" content="UVa 10600">
+<meta name="twitter:description" content="ACM Contest and BlackoutSolution SketchSuppose we have a set $S$ which represents all edges that are in MST, and a set $P$ represents all edges that are not in MST.
+The crucial observation for getting">
 
 
 
@@ -136,7 +136,7 @@ The crucial observation f">
 
 
 
-  <title>UVA10600 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>UVa 10600 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -286,7 +286,7 @@ The crucial observation f">
             
             
               
-                UVA10600
+                UVa 10600
               
             
           </h1>
@@ -312,6 +312,39 @@ The crucial observation f">
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">Competitive Programming</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/UVa/" itemprop="url" rel="index">
+                    <span itemprop="name">UVa</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -336,7 +369,7 @@ The crucial observation f">
       
 
       
-        <h1 id="UVA-10600-ACM-Contest-and-Blackout"><a href="#UVA-10600-ACM-Contest-and-Blackout" class="headerlink" title="UVA 10600 ACM Contest and Blackout"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=24&amp;page=show_problem&amp;problem=1541" target="_blank" rel="external">UVA 10600 ACM Contest and Blackout</a></h1><h2 id="Solution-Sketch"><a href="#Solution-Sketch" class="headerlink" title="Solution Sketch"></a>Solution Sketch</h2><p>Suppose we have a set $S$ which represents all edges that are in MST, and a set $P$ represents all edges that are not in MST.</p>
+        <h1 id="ACM-Contest-and-Blackout"><a href="#ACM-Contest-and-Blackout" class="headerlink" title="ACM Contest and Blackout"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=24&amp;page=show_problem&amp;problem=1541" target="_blank" rel="external">ACM Contest and Blackout</a></h1><h2 id="Solution-Sketch"><a href="#Solution-Sketch" class="headerlink" title="Solution Sketch"></a>Solution Sketch</h2><p>Suppose we have a set $S$ which represents all edges that are in MST, and a set $P$ represents all edges that are not in MST.</p>
 <p>The crucial observation for getting the next-to-minimal spanning tree is: it can be obtained by adding one edge from $P$ and removing the edge from $S$ which caused the loop after adding an edge from $P$.  </p>
 <a id="more"></a>
 <h2 id="AC-code"><a href="#AC-code" class="headerlink" title="AC code"></a>AC code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; ii;</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 111</span></div><div class="line"><span class="keyword">struct</span> UFDS &#123;</div><div class="line">    <span class="keyword">int</span> par[N];</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="built_in">memset</span>(par, <span class="number">-1</span>, <span class="keyword">sizeof</span>(par));</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">root</span><span class="params">(<span class="keyword">int</span> x)</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> par[x] &lt; <span class="number">0</span> ? x : par[x] = root(par[x]);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></div><div class="line">    &#123;</div><div class="line">        x = root(x);</div><div class="line">        y = root(y);</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (x == y)</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        <span class="keyword">if</span> (par[x] &gt; par[y])</div><div class="line">            swap(x, y);</div><div class="line">        par[x] += par[y];</div><div class="line">        par[y] = x;</div><div class="line">    &#125;</div><div class="line">&#125; ufds;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> ncase;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;ncase);</div><div class="line"></div><div class="line">    <span class="keyword">while</span> (ncase--) &#123;</div><div class="line">        <span class="keyword">int</span> n, m;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m);</div><div class="line"></div><div class="line">        <span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">int</span>, ii&gt;&gt; edge;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</div><div class="line">            <span class="keyword">int</span> u, v, w;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &amp;u, &amp;v, &amp;w);</div><div class="line"></div><div class="line">            edge.push_back(make_pair(w, ii(u, v)));</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        sort(edge.begin(), edge.end());</div><div class="line"></div><div class="line">        <span class="comment">// get MST</span></div><div class="line">        ufds.init();</div><div class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; mst, nmst; <span class="comment">// used edge</span></div><div class="line">        <span class="keyword">int</span> ans1 = <span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; (<span class="keyword">int</span>)edge.size(); i++) &#123;</div><div class="line">            <span class="keyword">int</span> u = edge[i].second.first;</div><div class="line">            <span class="keyword">int</span> v = edge[i].second.second;</div><div class="line">            <span class="keyword">int</span> w = edge[i].first;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (ufds.root(u) == ufds.root(v)) &#123;</div><div class="line">                nmst.push_back(i);</div><div class="line">                <span class="keyword">continue</span>;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">            ufds.merge(u, v);</div><div class="line">            mst.push_back(i);</div><div class="line">            ans1 += w;</div><div class="line">            <span class="comment">// printf("%d %d %d\n", i, w, ans1);</span></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">int</span> ans2 = INT_MAX;</div><div class="line">        <span class="keyword">if</span> (n - <span class="number">1</span> == m)</div><div class="line">            ans2 = ans1;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            <span class="comment">// change one selected edge at a time, and try to replace it with all</span></div><div class="line">            <span class="comment">// unselected edge</span></div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++) &#123;</div><div class="line">                <span class="keyword">int</span> tmp = <span class="number">0</span>;</div><div class="line">                <span class="comment">// redo ufds</span></div><div class="line">                ufds.init();</div><div class="line">                <span class="keyword">for</span> (<span class="keyword">auto</span> j : mst) &#123;</div><div class="line">                    <span class="keyword">if</span> (mst[i] == j)</div><div class="line">                        <span class="keyword">continue</span>;</div><div class="line">                    <span class="keyword">int</span> u = edge[j].second.first;</div><div class="line">                    <span class="keyword">int</span> v = edge[j].second.second;</div><div class="line">                    <span class="keyword">int</span> w = edge[j].first;</div><div class="line">                    ufds.merge(u, v);</div><div class="line">                    tmp += w;</div><div class="line">                &#125;</div><div class="line"></div><div class="line">                <span class="comment">// try all unused edge</span></div><div class="line">                <span class="keyword">for</span> (<span class="keyword">auto</span> j : nmst) &#123;</div><div class="line">                    <span class="keyword">int</span> u = edge[j].second.first;</div><div class="line">                    <span class="keyword">int</span> v = edge[j].second.second;</div><div class="line">                    <span class="keyword">int</span> w = edge[j].first;</div><div class="line">                    <span class="keyword">if</span> (ufds.root(u) != ufds.root(v)) &#123;</div><div class="line">                        ans2 = min(ans2, tmp + w);</div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d %d\n"</span>, ans1, ans2);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -472,7 +505,7 @@ The crucial observation f">
           
             <div class="site-state-item site-state-posts">
               <a href="/codingBlog/archives">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">47</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -483,7 +516,7 @@ The crucial observation f">
             
             <div class="site-state-item site-state-categories">
               <a href="/codingBlog/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -494,7 +527,7 @@ The crucial observation f">
             
             <div class="site-state-item site-state-tags">
               <a href="/codingBlog/tags/index.html">
-                <span class="site-state-item-count">52</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -529,7 +562,7 @@ The crucial observation f">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UVA-10600-ACM-Contest-and-Blackout"><span class="nav-number">1.</span> <span class="nav-text">UVA 10600 ACM Contest and Blackout</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-Sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution Sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.2.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ACM-Contest-and-Blackout"><span class="nav-number">1.</span> <span class="nav-text">ACM Contest and Blackout</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-Sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution Sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.2.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
             
 
           </div>
