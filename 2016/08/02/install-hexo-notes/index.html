@@ -110,7 +110,7 @@ sudo apt install npm
 
 
 Install Hexo core">
-<meta property="og:updated_time" content="2017-05-01T01:42:38.000Z">
+<meta property="og:updated_time" content="2017-05-01T01:45:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Installation Notes">
 <meta name="twitter:description" content="PrerequisitesUbuntu
@@ -415,8 +415,12 @@ Install Hexo core">
 <h2 id="Deployment-settings"><a href="#Deployment-settings" class="headerlink" title="Deployment settings"></a>Deployment settings</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:henrybear327/codingBlog.git</div><div class="line">  branch: gh-pages</div><div class="line">  message: &apos;Updated at:&#123;&#123;now(&quot;YYYY-MM-DD HH:mm:ss&quot;)&#125;&#125;&apos;</div><div class="line">  name: &apos;...&apos;</div><div class="line">  email: &apos;...@......&apos;</div></pre></td></tr></table></figure>
 <h1 id="Create-special-pages-for-next-theme"><a href="#Create-special-pages-for-next-theme" class="headerlink" title="Create special pages for next theme"></a><a href="https://github.com/iissnan/hexo-theme-next/wiki/创建标签云页面" target="_blank" rel="external">Create special pages for <code>next</code> theme</a></h1><ol>
 <li>Run <code>hexo new page &quot;tags&quot;</code></li>
-<li>Run <code>hexo new page categories</code></li>
-<li>Go to <code>tags/index.md</code> and copy-paste the following content<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: All tags</div><div class="line">date: 2016-08-09 01:47:00</div><div class="line">type: &quot;tags&quot;</div><div class="line">---</div></pre></td></tr></table></figure>
+<li><p>Go to <code>tags/index.md</code> and copy-paste the following content</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">title: All tags</div><div class="line">date: 2016-08-09 01:47:00</div><div class="line">type: &quot;tags&quot;</div><div class="line">---</div></pre></td></tr></table></figure>
+</li>
+<li><p>Run <code>hexo new page categories</code></p>
+</li>
+<li>Go to<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: All Categories</div><div class="line">date: 2017-05-01 09:45:00</div><div class="line">type: &quot;categories&quot;</div><div class="line">comments: false</div><div class="line">---</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <h1 id="Google-Analytics"><a href="#Google-Analytics" class="headerlink" title="Google Analytics"></a>Google Analytics</h1><p>Simply update the <code>google_analytics</code> field in the theme’s <code>_config.yml</code></p>
