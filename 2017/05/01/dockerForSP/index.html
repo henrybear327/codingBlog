@@ -72,7 +72,7 @@
 <link href="/codingBlog/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HDU,UFDS," />
+  <meta name="keywords" content="Docker," />
 
 
 
@@ -88,16 +88,22 @@
 
 
 
-<meta name="description" content="HDU5441 TravelSolution sketch將 邊 和 query 都進行小到大排序後，對於 query 從小而大的處理，將不超過當下query大小的 邊 陸續加入並查集中，並在進行 Union 時維護總組數即可。">
+<meta name="description" content="系統程式需要使用到 Ubuntu 環境，但是手頭上的電腦是 Unix-based 的 MacOS。實在是不想裝設虛擬機畢竟太佔空間，所以就來玩個 docker，效果真的奇佳！
+感謝光宇大大的神支援！讓這個 dockerfile 可以這麼完美。
+目前已經 deploy 到 DockerHub 上，可以直接 pull 下來，不用自己 build 囉！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HUD5441">
-<meta property="og:url" content="https://henrybear327.github.io/2017/01/20/HDU5441/index.html">
+<meta property="og:title" content="為了系統程式所弄的 Docker Image">
+<meta property="og:url" content="https://henrybear327.github.io/2017/05/01/dockerForSP/index.html">
 <meta property="og:site_name" content="程式隨筆">
-<meta property="og:description" content="HDU5441 TravelSolution sketch將 邊 和 query 都進行小到大排序後，對於 query 從小而大的處理，將不超過當下query大小的 邊 陸續加入並查集中，並在進行 Union 時維護總組數即可。">
-<meta property="og:updated_time" content="2017-05-01T02:58:27.000Z">
+<meta property="og:description" content="系統程式需要使用到 Ubuntu 環境，但是手頭上的電腦是 Unix-based 的 MacOS。實在是不想裝設虛擬機畢竟太佔空間，所以就來玩個 docker，效果真的奇佳！
+感謝光宇大大的神支援！讓這個 dockerfile 可以這麼完美。
+目前已經 deploy 到 DockerHub 上，可以直接 pull 下來，不用自己 build 囉！">
+<meta property="og:updated_time" content="2017-05-01T13:52:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HUD5441">
-<meta name="twitter:description" content="HDU5441 TravelSolution sketch將 邊 和 query 都進行小到大排序後，對於 query 從小而大的處理，將不超過當下query大小的 邊 陸續加入並查集中，並在進行 Union 時維護總組數即可。">
+<meta name="twitter:title" content="為了系統程式所弄的 Docker Image">
+<meta name="twitter:description" content="系統程式需要使用到 Ubuntu 環境，但是手頭上的電腦是 Unix-based 的 MacOS。實在是不想裝設虛擬機畢竟太佔空間，所以就來玩個 docker，效果真的奇佳！
+感謝光宇大大的神支援！讓這個 dockerfile 可以這麼完美。
+目前已經 deploy 到 DockerHub 上，可以直接 pull 下來，不用自己 build 囉！">
 
 
 
@@ -125,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://henrybear327.github.io/2017/01/20/HDU5441/"/>
+  <link rel="canonical" href="https://henrybear327.github.io/2017/05/01/dockerForSP/"/>
 
 
 
 
 
-  <title>HUD5441 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>為了系統程式所弄的 Docker Image | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -269,7 +275,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/20/HDU5441/">
+    <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/05/01/dockerForSP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Henry Tseng">
@@ -290,7 +296,7 @@
             
             
               
-                HUD5441
+                為了系統程式所弄的 Docker Image
               
             
           </h1>
@@ -305,8 +311,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-20T12:45:36+08:00">
-                2017-01-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-01T21:35:58+08:00">
+                2017-05-01
               </time>
             
 
@@ -328,19 +334,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/codingBlog/categories/Competitive-Programming/" itemprop="url" rel="index">
-                    <span itemprop="name">Competitive Programming</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/codingBlog/categories/Competitive-Programming/HDU/" itemprop="url" rel="index">
-                    <span itemprop="name">HDU</span>
+                  <a href="/codingBlog/categories/Docker/" itemprop="url" rel="index">
+                    <span itemprop="name">Docker</span>
                   </a>
                 </span>
 
@@ -373,9 +368,24 @@
       
 
       
-        <h1 id="HDU5441-Travel"><a href="#HDU5441-Travel" class="headerlink" title="HDU5441 Travel"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5441" target="_blank" rel="external">HDU5441 Travel</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>將 邊 和 query 都進行小到大排序後，對於 query 從小而大的處理，將不超過當下query大小的 邊 陸續加入並查集中，並在進行 Union 時維護總組數即可。</p>
+        <p>系統程式需要使用到 Ubuntu 環境，但是手頭上的電腦是 Unix-based 的 MacOS。實在是不想裝設虛擬機畢竟太佔空間，所以就來玩個 docker，效果真的奇佳！</p>
+<p>感謝<a href="https://github.com/peter0749" target="_blank" rel="external">光宇</a>大大的神支援！讓這個 dockerfile 可以這麼完美。</p>
+<p>目前已經 deploy 到 <a href="https://hub.docker.com/r/henrybear327/dockerforsp/" target="_blank" rel="external">DockerHub</a> 上，可以直接 pull 下來，不用自己 build 囉！</p>
 <a id="more"></a>
-<h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>, ll&gt; ii;</div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span> , ii&gt; iii;</div><div class="line"></div><div class="line"><span class="keyword">int</span> n, m, q;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> N 22222</span></div><div class="line"><span class="built_in">vector</span>&lt;iii&gt; edges;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	edges.clear();</div><div class="line">&#125;</div><div class="line"></div><div class="line">ll sum;</div><div class="line"><span class="keyword">struct</span> UFDS &#123;</div><div class="line">	ll par[N];</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="built_in">memset</span>(par, <span class="number">-1</span>, <span class="keyword">sizeof</span>(par));</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">root</span><span class="params">(<span class="keyword">int</span> x)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">return</span> par[x] &lt; <span class="number">0</span> ? x : par[x] = root(par[x]);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></div><div class="line">	&#123;</div><div class="line">		x = root(x);</div><div class="line">		y = root(y);</div><div class="line"></div><div class="line">		<span class="keyword">if</span>(x == y)</div><div class="line">			<span class="keyword">return</span>;</div><div class="line"></div><div class="line">		<span class="keyword">if</span>(par[x] &gt; par[y])</div><div class="line">			swap(x, y);</div><div class="line"></div><div class="line">		sum += <span class="number">2</span> * -par[x] * -par[y];</div><div class="line"></div><div class="line">		par[x] += par[y];</div><div class="line">		par[y] = x;</div><div class="line">	&#125;</div><div class="line">&#125; uf;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> ncase;</div><div class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;ncase);</div><div class="line"></div><div class="line">	<span class="keyword">while</span>(ncase--) &#123;</div><div class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &amp;n, &amp;m, &amp;q);</div><div class="line">		clear();</div><div class="line">		uf.init();</div><div class="line"></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</div><div class="line">			<span class="keyword">int</span> u, v, w;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>, &amp;u, &amp;v, &amp;w);</div><div class="line"></div><div class="line">			edges.push_back(iii(w, ii(u, v)));</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		sort(edges.begin(), edges.end());</div><div class="line"></div><div class="line">		<span class="built_in">vector</span>&lt;ii&gt; query;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; q; i++) &#123;</div><div class="line">			<span class="keyword">int</span> num;</div><div class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;num);</div><div class="line"></div><div class="line">			query.push_back(ii(num, i));</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		sort(query.begin(), query.end());</div><div class="line"></div><div class="line">		<span class="keyword">int</span> idx = <span class="number">0</span>;</div><div class="line">		sum = <span class="number">0</span>;</div><div class="line">		<span class="built_in">vector</span>&lt;ii&gt; ans;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> i : query) &#123;</div><div class="line">			<span class="keyword">while</span>(idx &lt; (<span class="keyword">int</span>)edges.size() &amp;&amp; edges[idx].first &lt;= i.first) &#123;</div><div class="line">				uf.merge(edges[idx].second.first, edges[idx].second.second);</div><div class="line">				idx++;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">			ans.push_back(ii(i.second, sum));</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		sort(ans.begin(), ans.end());</div><div class="line"></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> i : ans)</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, i.second);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a><a href="https://github.com/henrybear327/DockerForSP/blob/master/readme.md" target="_blank" rel="external">基本用法</a></h1><ul>
+<li>build: 在有 dockerfile 的目錄底下，執行 <code>docker build -t [image name] --no-cache --rm .</code> 即可</li>
+<li>create container (first time): <code>docker run -p22222:22 --cap-add SYS_PTRACE -v [absolute path on local machine : absolute path in docker container] -dt [image name/id]</code><ul>
+<li><code>ssh ubuntu@localhost -p 22222</code> 來連入 container，密碼為<code>ubuntu</code></li>
+</ul>
+</li>
+<li>list containers: <code>docker ps -a</code></li>
+<li>list images: <code>docker images -a</code></li>
+<li>stop container: <code>docker stop [ps ID]</code></li>
+<li>remove stopped container: <code>docker rm [ps ID]</code></li>
+<li>stop and remove all containers:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">docker stop `docker ps -aq` // stop all ps</div><div class="line">docker rm `docker ps -aq` // remove all ps</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h1><figure class="highlight dockerfile"><figcaption><span>dockerfile</span><a href="https://raw.githubusercontent.com/henrybear327/DockerForSP/master/Dockerfile" target="_blank" rel="external">View latest code on github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">FROM</span> ubuntu:xenial</div><div class="line"></div><div class="line"><span class="comment"># Setup user ubuntu, with password ubuntu</span></div><div class="line"><span class="keyword">RUN</span> adduser --disabled-password --gecos "" ubuntu</div><div class="line"><span class="keyword">RUN</span> echo "ubuntu:ubuntu" | chpasswd</div><div class="line"><span class="keyword">RUN</span> usermod -aG sudo ubuntu</div><div class="line"></div><div class="line"><span class="comment"># Setup vimrc</span></div><div class="line"><span class="keyword">COPY</span> .vimrc /home/ubuntu/.vimrc</div><div class="line"></div><div class="line"><span class="comment"># Update and install software packages for SP</span></div><div class="line"><span class="keyword">RUN</span> apt-get update</div><div class="line"><span class="keyword">RUN</span> apt-get upgrade -y</div><div class="line"><span class="keyword">RUN</span> apt-get install -y locales sudo openssh-server vim apt-utils git wget curl strace ltrace\</div><div class="line">                        build-essential screen man gdb valgrind acl \</div><div class="line">                        astyle clang-format</div><div class="line"><span class="keyword">RUN</span> mkdir /var/run/sshd</div><div class="line"></div><div class="line"><span class="comment"># Set locale to Traditional Chinese</span></div><div class="line"><span class="keyword">RUN</span> locale-gen en_US.UTF-8</div><div class="line"><span class="keyword">RUN</span> locale-gen zh_TW.UTF-8</div><div class="line"><span class="keyword">ENV</span> LANG en_US.UTF-<span class="number">8</span></div><div class="line"><span class="keyword">ENV</span> LANGUAGE en_US:en</div><div class="line"><span class="keyword">ENV</span> LC_ALL en_US.UTF-<span class="number">8</span></div><div class="line"><span class="comment"># RUN echo "export LC_ALL=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.bashrc</span></div><div class="line"><span class="comment"># RUN echo "export LANG=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.bashrc</span></div><div class="line"><span class="comment"># RUN echo "export LANGUAGE=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.bashrc</span></div><div class="line"></div><div class="line"><span class="comment"># Change to zsh for default shell</span></div><div class="line"><span class="keyword">RUN</span> apt-get update &amp;&amp; apt-get install -y zsh git-core</div><div class="line"><span class="keyword">RUN</span> git clone https://github.com/robbyrussell/oh-my-zsh.git /home/ubuntu/.oh-my-zsh \</div><div class="line">    &amp;&amp; cp /home/ubuntu/.oh-my-zsh/templates/zshrc.zsh-template /home/ubuntu/.zshrc \</div><div class="line">    &amp;&amp; chsh -s /bin/zsh ubuntu</div><div class="line"><span class="keyword">RUN</span> echo "export LC_ALL=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.zshrc</div><div class="line"><span class="keyword">RUN</span> echo "export LANG=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.zshrc</div><div class="line"><span class="keyword">RUN</span> echo "export LANGUAGE=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.zshrc</div><div class="line"></div><div class="line"><span class="keyword">RUN</span> apt-get autoremove</div><div class="line"><span class="keyword">RUN</span> apt-get clean</div><div class="line"></div><div class="line"><span class="comment"># Expose SSH port</span></div><div class="line"><span class="keyword">EXPOSE</span> <span class="number">22</span></div><div class="line"><span class="keyword">CMD</span>    ["/usr/sbin/sshd", "-D"]</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -405,9 +415,7 @@
       
         <div class="post-tags">
           
-            <a href="/codingBlog/tags/HDU/" rel="tag"># HDU</a>
-          
-            <a href="/codingBlog/tags/UFDS/" rel="tag"># UFDS</a>
+            <a href="/codingBlog/tags/Docker/" rel="tag"># Docker</a>
           
         </div>
       
@@ -420,8 +428,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/codingBlog/2017/01/20/HDU5443/" rel="next" title="HUD5443">
-                <i class="fa fa-chevron-left"></i> HUD5443
+              <a href="/codingBlog/2017/05/01/nqueen/" rel="next" title="N 皇后，回味大一程式作業">
+                <i class="fa fa-chevron-left"></i> N 皇后，回味大一程式作業
               </a>
             
           </div>
@@ -429,10 +437,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/codingBlog/2017/03/24/POJ3104/" rel="prev" title="POJ3104">
-                POJ3104 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -561,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HDU5441-Travel"><span class="nav-number">1.</span> <span class="nav-text">HDU5441 Travel</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本用法"><span class="nav-number">1.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dockerfile"><span class="nav-number">2.</span> <span class="nav-text">Dockerfile</span></a></li></ol></div>
             
 
           </div>
