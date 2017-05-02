@@ -267,6 +267,166 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/01/15/POJ3040/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Henry Tseng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/codingBlog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="程式隨筆">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/codingBlog/2017/01/15/POJ3040/" itemprop="url">
+                  POJ3040
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-15T22:11:57+08:00">
+                2017-01-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">Competitive Programming</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/POJ/" itemprop="url" rel="index">
+                    <span itemprop="name">POJ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Allowance"><a href="#Allowance" class="headerlink" title="Allowance "></a><a href="http://poj.org/problem?id=3040">Allowance </a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>The sentence <code>each denomination of coin evenly divides the next-larger denomination</code> is a good lead for you to safely assume that using greedy strategy is fine.</p>
+<p>If the coin value is greater than $C$, then there is no need to combine two coins into one. Just distribute them out.</p>
+<p>For all other remaining coin values, use greedy strategy (just like coin change), and start with the largest coin value to try to get the total value as close to $C$ using minimal coins as possible. If the total value we can get is not exactly $C$, then we run the greedy algorithm from the smallest coin to the largest one. There is a little trick though, $min(\frac{remaining\ value + current\ coin\ value\ - 1}{current\ coin\ value}, all\ remaining\ coins\ for\ this\ coin\ value)$ can get you the minimal amount of coins by exceeding $C$ no more than the value of the minimal coin value that still have coins available.</p>
+<p>This <a href="https://gist.github.com/amoshyc/e74aee512a5448f5d75f">tutorial</a> have a casual prove on this method.</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/codingBlog/2017/01/15/POJ3040/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2016/11/01/CF-R378-Div2-C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1661,169 +1821,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2016/08/18/UVA10600/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Henry Tseng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/codingBlog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="程式隨筆">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/codingBlog/2016/08/18/UVA10600/" itemprop="url">
-                  UVa 10600
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-18T20:34:20+08:00">
-                2016-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/codingBlog/categories/Competitive-Programming/" itemprop="url" rel="index">
-                    <span itemprop="name">Competitive Programming</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/codingBlog/categories/Competitive-Programming/UVa/" itemprop="url" rel="index">
-                    <span itemprop="name">UVa</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="ACM-Contest-and-Blackout"><a href="#ACM-Contest-and-Blackout" class="headerlink" title="ACM Contest and Blackout"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=24&amp;page=show_problem&amp;problem=1541">ACM Contest and Blackout</a></h1><h2 id="Solution-Sketch"><a href="#Solution-Sketch" class="headerlink" title="Solution Sketch"></a>Solution Sketch</h2><p>Suppose we have a set $S$ which represents all edges that are in MST, and a set $P$ represents all edges that are not in MST.</p>
-<p>The crucial observation for getting the next-to-minimal spanning tree is: it can be obtained by adding one edge from $P$ and removing the edge from $S$ which caused the loop after adding an edge from $P$.  </p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/codingBlog/2016/08/18/UVA10600/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/codingBlog/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/codingBlog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/codingBlog/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/codingBlog/page/5/">5</a><a class="extend next" rel="next" href="/codingBlog/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/codingBlog/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/codingBlog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/codingBlog/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/codingBlog/page/5/">5</a><a class="page-number" href="/codingBlog/page/6/">6</a><a class="extend next" rel="next" href="/codingBlog/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1868,7 +1870,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/codingBlog/archives">
-                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1879,7 +1881,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/codingBlog/categories/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -1890,7 +1892,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/codingBlog/tags/index.html">
-                <span class="site-state-item-count">43</span>
+                <span class="site-state-item-count">45</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
