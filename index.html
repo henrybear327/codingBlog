@@ -386,7 +386,7 @@
 
       
         
-          <h1 id="Quotient-Harmonic-Series商調和級數"><a href="#Quotient-Harmonic-Series商調和級數" class="headerlink" title="Quotient Harmonic Series商調和級數"></a><a href="http://e-tutor.itsa.org.tw/e-Tutor/mod/programming/view.php?a=15725">Quotient Harmonic Series商調和級數</a></h1><p>其實我覺得這題有個觀察是說，$m$ 所除上的除數可以看成 $index$，然後 $\frac{m}{除數} = 商$ 且 $\frac{m}{商} = 除數$。</p>
+          <h1 id="Quotient-Harmonic-Series-商調和級數"><a href="#Quotient-Harmonic-Series-商調和級數" class="headerlink" title="Quotient Harmonic Series 商調和級數"></a><a href="http://e-tutor.itsa.org.tw/e-Tutor/mod/programming/view.php?a=15725">Quotient Harmonic Series 商調和級數</a></h1><p>其實我覺得這題有個觀察是說，$m$ 所除上的除數可以看成 $index$，然後 $\frac{m}{除數} = 商$ 且 $\frac{m}{商} = 除數$。</p>
 <p>這題有點得從操作中感覺一下，所以拿 $m = 9$ 來示範一下吧。</p>
 <p>我們倒著找回來，先設定除數為 $b = 9$，$q = \frac{m}{b} = 1$，這個商也就是要拿來加總的數值。個數的話，利用文章一開始所說的觀察，我們可以知道 $b\prime = \frac{m}{(q + 1)} = 4$ 就會是下一個非此 $q$ 的位置，也就是除數。所以 $b\prime - b$ 就是重複次數，且下一回合的 $b$ 就是 $b\prime$。</p>
           <!--noindex-->
