@@ -72,7 +72,7 @@
 <link href="/codingBlog/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Docker," />
+  <meta name="keywords" content="Math,Implementation,ITSA 桂冠賽," />
 
 
 
@@ -88,22 +88,22 @@
 
 
 
-<meta name="description" content="系統程式需要使用到 Ubuntu 環境，但是手頭上的電腦是 Unix-based 的 MacOS。實在是不想裝設虛擬機畢竟太佔空間，所以就來玩個 docker，效果真的奇佳！
-感謝光宇大大的神支援！讓這個 dockerfile 可以這麼完美。
-目前已經 deploy 到 DockerHub 上，可以直接 pull 下來，不用自己 build 囉！">
+<meta name="description" content="Quotient Harmonic Series商調和級數其實我覺得這題有個觀察是說，$m$ 所除上的除數可以看成 $index$，然後 $\frac{m}{除數} = 商$ 且 $\frac{m}{商} = 除數$。
+這題有點得從操作中感覺一下，所以拿 $m = 9$ 來示範一下吧。
+我們倒著找回來，先設定除數為 $b = 9$，$q = \frac{m}{b} = 1$，這個商也就是要拿來加總">
 <meta property="og:type" content="article">
-<meta property="og:title" content="上系統程式課程所用的 Docker Image">
-<meta property="og:url" content="https://henrybear327.github.io/2017/05/01/dockerForSP/index.html">
+<meta property="og:title" content="ITSA 2016 桂冠賽 挑戰組 第五題">
+<meta property="og:url" content="https://henrybear327.github.io/2017/05/03/ITSA-2016-DivisionA-5/index.html">
 <meta property="og:site_name" content="程式隨筆">
-<meta property="og:description" content="系統程式需要使用到 Ubuntu 環境，但是手頭上的電腦是 Unix-based 的 MacOS。實在是不想裝設虛擬機畢竟太佔空間，所以就來玩個 docker，效果真的奇佳！
-感謝光宇大大的神支援！讓這個 dockerfile 可以這麼完美。
-目前已經 deploy 到 DockerHub 上，可以直接 pull 下來，不用自己 build 囉！">
-<meta property="og:updated_time" content="2017-05-01T13:55:10.000Z">
+<meta property="og:description" content="Quotient Harmonic Series商調和級數其實我覺得這題有個觀察是說，$m$ 所除上的除數可以看成 $index$，然後 $\frac{m}{除數} = 商$ 且 $\frac{m}{商} = 除數$。
+這題有點得從操作中感覺一下，所以拿 $m = 9$ 來示範一下吧。
+我們倒著找回來，先設定除數為 $b = 9$，$q = \frac{m}{b} = 1$，這個商也就是要拿來加總">
+<meta property="og:updated_time" content="2017-05-03T13:25:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="上系統程式課程所用的 Docker Image">
-<meta name="twitter:description" content="系統程式需要使用到 Ubuntu 環境，但是手頭上的電腦是 Unix-based 的 MacOS。實在是不想裝設虛擬機畢竟太佔空間，所以就來玩個 docker，效果真的奇佳！
-感謝光宇大大的神支援！讓這個 dockerfile 可以這麼完美。
-目前已經 deploy 到 DockerHub 上，可以直接 pull 下來，不用自己 build 囉！">
+<meta name="twitter:title" content="ITSA 2016 桂冠賽 挑戰組 第五題">
+<meta name="twitter:description" content="Quotient Harmonic Series商調和級數其實我覺得這題有個觀察是說，$m$ 所除上的除數可以看成 $index$，然後 $\frac{m}{除數} = 商$ 且 $\frac{m}{商} = 除數$。
+這題有點得從操作中感覺一下，所以拿 $m = 9$ 來示範一下吧。
+我們倒著找回來，先設定除數為 $b = 9$，$q = \frac{m}{b} = 1$，這個商也就是要拿來加總">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://henrybear327.github.io/2017/05/01/dockerForSP/"/>
+  <link rel="canonical" href="https://henrybear327.github.io/2017/05/03/ITSA-2016-DivisionA-5/"/>
 
 
 
 
 
-  <title>上系統程式課程所用的 Docker Image | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>ITSA 2016 桂冠賽 挑戰組 第五題 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -275,7 +275,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/05/01/dockerForSP/">
+    <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/05/03/ITSA-2016-DivisionA-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Henry Tseng">
@@ -296,7 +296,7 @@
             
             
               
-                上系統程式課程所用的 Docker Image
+                ITSA 2016 桂冠賽 挑戰組 第五題
               
             
           </h1>
@@ -311,8 +311,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-01T21:35:58+08:00">
-                2017-05-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-03T21:10:21+08:00">
+                2017-05-03
               </time>
             
 
@@ -334,8 +334,30 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/codingBlog/categories/Docker/" itemprop="url" rel="index">
-                    <span itemprop="name">Docker</span>
+                  <a href="/codingBlog/categories/Competitive-Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">Competitive Programming</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/ITSA-桂冠賽/" itemprop="url" rel="index">
+                    <span itemprop="name">ITSA 桂冠賽</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Competitive-Programming/ITSA-桂冠賽/2016/" itemprop="url" rel="index">
+                    <span itemprop="name">2016</span>
                   </a>
                 </span>
 
@@ -368,24 +390,11 @@
       
 
       
-        <p>系統程式需要使用到 Ubuntu 環境，但是手頭上的電腦是 Unix-based 的 MacOS。實在是不想裝設虛擬機畢竟太佔空間，所以就來玩個 docker，效果真的奇佳！</p>
-<p>感謝<a href="https://github.com/peter0749" target="_blank" rel="external">光宇</a>大大的神支援！讓這個 dockerfile 可以這麼完美。</p>
-<p>目前已經 deploy 到 <a href="https://hub.docker.com/r/henrybear327/dockerforsp/" target="_blank" rel="external">DockerHub</a> 上，可以直接 pull 下來，不用自己 build 囉！</p>
+        <h1 id="Quotient-Harmonic-Series商調和級數"><a href="#Quotient-Harmonic-Series商調和級數" class="headerlink" title="Quotient Harmonic Series商調和級數"></a><a href="http://e-tutor.itsa.org.tw/e-Tutor/mod/programming/view.php?a=15725" target="_blank" rel="external">Quotient Harmonic Series商調和級數</a></h1><p>其實我覺得這題有個觀察是說，$m$ 所除上的除數可以看成 $index$，然後 $\frac{m}{除數} = 商$ 且 $\frac{m}{商} = 除數$。</p>
+<p>這題有點得從操作中感覺一下，所以拿 $m = 9$ 來示範一下吧。</p>
+<p>我們倒著找回來，先設定除數為 $b = 9$，$q = \frac{m}{b} = 1$，這個商也就是要拿來加總的數值。個數的話，利用文章一開始所說的觀察，我們可以知道 $b\prime = \frac{m}{(q + 1)} = 4$ 就會是下一個非此 $q$ 的位置，也就是除數。所以 $b\prime - b$ 就是重複次數，且下一回合的 $b$ 就是 $b\prime$。</p>
 <a id="more"></a>
-<h1 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a><a href="https://github.com/henrybear327/DockerForSP/blob/master/readme.md" target="_blank" rel="external">基本用法</a></h1><ul>
-<li>build: 在有 dockerfile 的目錄底下，執行 <code>docker build -t [image name] --no-cache --rm .</code> 即可</li>
-<li>create container (first time): <code>docker run -p22222:22 --cap-add SYS_PTRACE -v [absolute path on local machine : absolute path in docker container] -dt [image name/id]</code><ul>
-<li><code>ssh ubuntu@localhost -p 22222</code> 來連入 container，密碼為<code>ubuntu</code></li>
-</ul>
-</li>
-<li>list containers: <code>docker ps -a</code></li>
-<li>list images: <code>docker images -a</code></li>
-<li>stop container: <code>docker stop [ps ID]</code></li>
-<li>remove stopped container: <code>docker rm [ps ID]</code></li>
-<li>stop and remove all containers:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">docker stop `docker ps -aq` // stop all ps</div><div class="line">docker rm `docker ps -aq` // remove all ps</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h1><figure class="highlight dockerfile"><figcaption><span>dockerfile</span><a href="https://raw.githubusercontent.com/henrybear327/DockerForSP/master/Dockerfile" target="_blank" rel="external">View latest code on github</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">FROM</span> ubuntu:xenial</div><div class="line"></div><div class="line"><span class="comment"># Setup user ubuntu, with password ubuntu</span></div><div class="line"><span class="keyword">RUN</span> adduser --disabled-password --gecos "" ubuntu</div><div class="line"><span class="keyword">RUN</span> echo "ubuntu:ubuntu" | chpasswd</div><div class="line"><span class="keyword">RUN</span> usermod -aG sudo ubuntu</div><div class="line"></div><div class="line"><span class="comment"># Setup vimrc</span></div><div class="line"><span class="keyword">COPY</span> .vimrc /home/ubuntu/.vimrc</div><div class="line"></div><div class="line"><span class="comment"># Update and install software packages for SP</span></div><div class="line"><span class="keyword">RUN</span> apt-get update</div><div class="line"><span class="keyword">RUN</span> apt-get upgrade -y</div><div class="line"><span class="keyword">RUN</span> apt-get install -y locales sudo openssh-server vim apt-utils git wget curl strace ltrace\</div><div class="line">                        build-essential screen man gdb valgrind acl \</div><div class="line">                        astyle clang-format</div><div class="line"><span class="keyword">RUN</span> mkdir /var/run/sshd</div><div class="line"></div><div class="line"><span class="comment"># Set locale to Traditional Chinese</span></div><div class="line"><span class="keyword">RUN</span> locale-gen en_US.UTF-8</div><div class="line"><span class="keyword">RUN</span> locale-gen zh_TW.UTF-8</div><div class="line"><span class="keyword">ENV</span> LANG en_US.UTF-<span class="number">8</span></div><div class="line"><span class="keyword">ENV</span> LANGUAGE en_US:en</div><div class="line"><span class="keyword">ENV</span> LC_ALL en_US.UTF-<span class="number">8</span></div><div class="line"><span class="comment"># RUN echo "export LC_ALL=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.bashrc</span></div><div class="line"><span class="comment"># RUN echo "export LANG=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.bashrc</span></div><div class="line"><span class="comment"># RUN echo "export LANGUAGE=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.bashrc</span></div><div class="line"></div><div class="line"><span class="comment"># Change to zsh for default shell</span></div><div class="line"><span class="keyword">RUN</span> apt-get update &amp;&amp; apt-get install -y zsh git-core</div><div class="line"><span class="keyword">RUN</span> git clone https://github.com/robbyrussell/oh-my-zsh.git /home/ubuntu/.oh-my-zsh \</div><div class="line">    &amp;&amp; cp /home/ubuntu/.oh-my-zsh/templates/zshrc.zsh-template /home/ubuntu/.zshrc \</div><div class="line">    &amp;&amp; chsh -s /bin/zsh ubuntu</div><div class="line"><span class="keyword">RUN</span> echo "export LC_ALL=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.zshrc</div><div class="line"><span class="keyword">RUN</span> echo "export LANG=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.zshrc</div><div class="line"><span class="keyword">RUN</span> echo "export LANGUAGE=zh_TW.UTF-8" &gt;&gt; /home/ubuntu/.zshrc</div><div class="line"></div><div class="line"><span class="keyword">RUN</span> apt-get autoremove</div><div class="line"><span class="keyword">RUN</span> apt-get clean</div><div class="line"></div><div class="line"><span class="comment"># Expose SSH port</span></div><div class="line"><span class="keyword">EXPOSE</span> <span class="number">22</span></div><div class="line"><span class="keyword">CMD</span>    ["/usr/sbin/sshd", "-D"]</div></pre></td></tr></table></figure>
+<h2 id="AC-code"><a href="#AC-code" class="headerlink" title="AC code"></a>AC code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> ncase;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;ncase);</div><div class="line"></div><div class="line">    <span class="keyword">while</span> (ncase--) &#123;</div><div class="line">        ll m;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%lld"</span>, &amp;m);</div><div class="line"></div><div class="line">        ll b = m;</div><div class="line">        ll ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span> (b &gt; <span class="number">0</span>) &#123;</div><div class="line">            ll q = m / b;</div><div class="line">            ll b1 = m / (q + <span class="number">1</span>);</div><div class="line">            ans += q * (b - b1);</div><div class="line">            b = b1;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, ans);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -415,7 +424,11 @@
       
         <div class="post-tags">
           
-            <a href="/codingBlog/tags/Docker/" rel="tag"># Docker</a>
+            <a href="/codingBlog/tags/Math/" rel="tag"># Math</a>
+          
+            <a href="/codingBlog/tags/Implementation/" rel="tag"># Implementation</a>
+          
+            <a href="/codingBlog/tags/ITSA-桂冠賽/" rel="tag"># ITSA 桂冠賽</a>
           
         </div>
       
@@ -428,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/codingBlog/2017/05/01/nqueen/" rel="next" title="N 皇后，回味大一程式作業">
-                <i class="fa fa-chevron-left"></i> N 皇后，回味大一程式作業
+              <a href="/codingBlog/2017/05/03/template-CC/" rel="next" title="(Template) Connected component">
+                <i class="fa fa-chevron-left"></i> (Template) Connected component
               </a>
             
           </div>
@@ -437,10 +450,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/codingBlog/2017/05/02/template-cut-edge-vertex/" rel="prev" title="(Template) Articulation point and Bridge">
-                (Template) Articulation point and Bridge <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本用法"><span class="nav-number">1.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dockerfile"><span class="nav-number">2.</span> <span class="nav-text">Dockerfile</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Quotient-Harmonic-Series商調和級數"><span class="nav-number">1.</span> <span class="nav-text">Quotient Harmonic Series商調和級數</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.1.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
             
 
           </div>
