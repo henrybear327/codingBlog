@@ -375,7 +375,8 @@
 
       
         
-          <h1 id="Word-Transformation"><a href="#Word-Transformation" class="headerlink" title="Word Transformation"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;category=&amp;problem=370">Word Transformation</a></h1><h2 id="Abridge-problem-statement"><a href="#Abridge-problem-statement" class="headerlink" title="Abridge problem statement"></a>Abridge problem statement</h2><p>給你一個字典，請你將給定的字串 $A$ 利用字典中的字 轉換成字串 $B$。轉換過程中，連續兩字串只能差一個字母，且長度需相同。</p>
+          <h1 id="Word-Transformation"><a href="#Word-Transformation" class="headerlink" title="Word Transformation"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;category=&amp;problem=370">Word Transformation</a></h1><h2 id="Abridge-problem-statement"><a href="#Abridge-problem-statement" class="headerlink" title="Abridge problem statement"></a>Abridge problem statement</h2><p>給你一個字典，請你將給定的字串 $A$ ，利用字典中的字，在最少次數下，轉換成字串 $B$。其中，轉換過程中，連續兩字串只能差一個字母，且長度需相同。</p>
+<p>輸出最少次數為多少。</p>
 <h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>利用 BFS。<strong>一定要記得，從queue中移除的點，不能再被加入queue中，不然會TLE</strong></p>
 <p>可以加速的一個方法，是先把可以轉換的連續兩字加上一條邊。之後在圖上做 BFS 會快很多，畢竟不用每次都做字串比對。</p>
           <!--noindex-->
