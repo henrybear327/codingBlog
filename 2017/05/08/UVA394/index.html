@@ -74,7 +74,7 @@
 <link href="/codingBlog/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Math,Binary search," />
+  <meta name="keywords" content="UVa," />
 
 
 
@@ -90,22 +90,16 @@
 
 
 
-<meta name="description" content="DryingSolution sketch別懶著推公式呀！QQ 二分搜尋被坑過幾次了還是被繼續坑QQ
-設 x 為烘衣服時間：$k * x + (mid - x) &amp;gt;= a_i$$x(k - 1) &amp;gt;= a_i - mid$$x &amp;gt;= \frac{(a_i - mid)}{(k - 1)}$
-注意 special case!!">
+<meta name="description" content="MapmakerAbridge problem statementSolution sketch">
 <meta property="og:type" content="article">
-<meta property="og:title" content="POJ3104">
-<meta property="og:url" content="https://henrybear327.github.io/2017/03/24/POJ3104/index.html">
+<meta property="og:title" content="UVA394">
+<meta property="og:url" content="https://henrybear327.github.io/2017/05/08/UVA394/index.html">
 <meta property="og:site_name" content="程式隨筆">
-<meta property="og:description" content="DryingSolution sketch別懶著推公式呀！QQ 二分搜尋被坑過幾次了還是被繼續坑QQ
-設 x 為烘衣服時間：$k * x + (mid - x) &amp;gt;= a_i$$x(k - 1) &amp;gt;= a_i - mid$$x &amp;gt;= \frac{(a_i - mid)}{(k - 1)}$
-注意 special case!!">
-<meta property="og:updated_time" content="2017-05-01T02:55:48.000Z">
+<meta property="og:description" content="MapmakerAbridge problem statementSolution sketch">
+<meta property="og:updated_time" content="2017-05-08T14:09:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="POJ3104">
-<meta name="twitter:description" content="DryingSolution sketch別懶著推公式呀！QQ 二分搜尋被坑過幾次了還是被繼續坑QQ
-設 x 為烘衣服時間：$k * x + (mid - x) &amp;gt;= a_i$$x(k - 1) &amp;gt;= a_i - mid$$x &amp;gt;= \frac{(a_i - mid)}{(k - 1)}$
-注意 special case!!">
+<meta name="twitter:title" content="UVA394">
+<meta name="twitter:description" content="MapmakerAbridge problem statementSolution sketch">
 
 
 
@@ -133,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://henrybear327.github.io/2017/03/24/POJ3104/"/>
+  <link rel="canonical" href="https://henrybear327.github.io/2017/05/08/UVA394/"/>
 
 
 
 
 
-  <title>POJ3104 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>UVA394 | 程式隨筆</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -277,7 +271,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/03/24/POJ3104/">
+    <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/05/08/UVA394/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Henry Tseng">
@@ -298,7 +292,7 @@
             
             
               
-                POJ3104
+                UVA394
               
             
           </h1>
@@ -313,8 +307,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-24T23:01:54+08:00">
-                2017-03-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-08T22:09:04+08:00">
+                2017-05-08
               </time>
             
 
@@ -347,8 +341,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/codingBlog/categories/Competitive-Programming/POJ/" itemprop="url" rel="index">
-                    <span itemprop="name">POJ</span>
+                  <a href="/codingBlog/categories/Competitive-Programming/UVa/" itemprop="url" rel="index">
+                    <span itemprop="name">UVa</span>
                   </a>
                 </span>
 
@@ -381,11 +375,8 @@
       
 
       
-        <h1 id="Drying"><a href="#Drying" class="headerlink" title="Drying"></a><a href="http://poj.org/problem?id=3104" target="_blank" rel="external">Drying</a></h1><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><p>別懶著推公式呀！QQ 二分搜尋被坑過幾次了還是被繼續坑QQ</p>
-<p>設 x 為烘衣服時間：<br>$k * x + (mid - x) &gt;= a_i$<br>$x(k - 1) &gt;= a_i - mid$<br>$x &gt;= \frac{(a_i - mid)}{(k - 1)}$</p>
-<p>注意 special case!!</p>
-<a id="more"></a>
-<h2 id="AC-Code"><a href="#AC-Code" class="headerlink" title="AC Code"></a>AC Code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;climits&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100100</span>;</div><div class="line"><span class="keyword">int</span> n, k;</div><div class="line"><span class="keyword">int</span> data[N];</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> mid)</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">long</span> <span class="keyword">long</span> total = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (data[i] - mid &lt;= <span class="number">0</span>)</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line"></div><div class="line">        total += (data[i] - mid) / (k - <span class="number">1</span>) + ((data[i] - mid) % (k - <span class="number">1</span>) &gt; <span class="number">0</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> total &lt;= mid;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line"></div><div class="line">    <span class="keyword">int</span> mx = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, data + i);</div><div class="line">        mx = max(mx, data[i]);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;k);</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (k == <span class="number">1</span>) &#123;</div><div class="line">        <span class="comment">// special case</span></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, mx);</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> l = <span class="number">-1</span>, r = <span class="number">1e9</span> + <span class="number">10</span>;</div><div class="line"></div><div class="line">    <span class="keyword">while</span> (r - l &gt; <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">int</span> mid = l + (r - l) / <span class="number">2</span>;</div><div class="line"></div><div class="line">        <span class="comment">// 0 0 0 1 1 1 1</span></div><div class="line">        <span class="keyword">if</span> (check(mid))</div><div class="line">            r = mid;</div><div class="line">        <span class="keyword">else</span></div><div class="line">            l = mid;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// r</span></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, r);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <h1 id="Mapmaker"><a href="#Mapmaker" class="headerlink" title="Mapmaker"></a><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=24&amp;page=show_problem&amp;problem=330" target="_blank" rel="external">Mapmaker</a></h1><h2 id="Abridge-problem-statement"><a href="#Abridge-problem-statement" class="headerlink" title="Abridge problem statement"></a>Abridge problem statement</h2><h2 id="Solution-sketch"><a href="#Solution-sketch" class="headerlink" title="Solution sketch"></a>Solution sketch</h2><a id="more"></a>
+<h2 id="AC-code"><a href="#AC-code" class="headerlink" title="AC code"></a>AC code</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
 
       
     </div>
@@ -415,9 +406,7 @@
       
         <div class="post-tags">
           
-            <a href="/codingBlog/tags/Math/" rel="tag"># Math</a>
-          
-            <a href="/codingBlog/tags/Binary-search/" rel="tag"># Binary search</a>
+            <a href="/codingBlog/tags/UVa/" rel="tag"># UVa</a>
           
         </div>
       
@@ -430,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/codingBlog/2017/01/20/HDU5441/" rel="next" title="HUD5441">
-                <i class="fa fa-chevron-left"></i> HUD5441
+              <a href="/codingBlog/2017/05/08/UVA230/" rel="next" title="UVA230">
+                <i class="fa fa-chevron-left"></i> UVA230
               </a>
             
           </div>
@@ -439,10 +428,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/codingBlog/2017/03/24/POJ3579/" rel="prev" title="POJ3579">
-                POJ3579 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -571,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Drying"><span class="nav-number">1.</span> <span class="nav-text">Drying</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.1.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-Code"><span class="nav-number">1.2.</span> <span class="nav-text">AC Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Mapmaker"><span class="nav-number">1.</span> <span class="nav-text">Mapmaker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abridge-problem-statement"><span class="nav-number">1.1.</span> <span class="nav-text">Abridge problem statement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Solution-sketch"><span class="nav-number">1.2.</span> <span class="nav-text">Solution sketch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC-code"><span class="nav-number">1.3.</span> <span class="nav-text">AC code</span></a></li></ol></li></ol></div>
             
 
           </div>
