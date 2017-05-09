@@ -96,7 +96,7 @@
 <meta property="og:url" content="https://henrybear327.github.io/2016/08/02/install-hexo-notes/index.html">
 <meta property="og:site_name" content="程式隨筆">
 <meta property="og:description" content="My Hexo setting notesJust random stuff, may be outdated.">
-<meta property="og:updated_time" content="2017-05-09T15:23:05.104Z">
+<meta property="og:updated_time" content="2017-05-09T15:24:08.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Installation Notes">
 <meta name="twitter:description" content="My Hexo setting notesJust random stuff, may be outdated.">
@@ -389,6 +389,7 @@
 <h1 id="Hexo-Usage"><a href="#Hexo-Usage" class="headerlink" title="Hexo Usage"></a>Hexo Usage</h1><ul>
 <li>Create a new project:<ul>
 <li>run <code>hexo init __FOLDERNAME__</code> in the directory that you would like to save the Hexo project</li>
+<li><code>cd</code> into <code>__FOLDERNAME__</code> and run <code>npm install</code>! $\rigtharrow$ crucial step, or the page build will fail…</li>
 <li><code>git init</code> the project folder. <strong>NOTICE</strong>: All files to be displayed must be on [<code>gh-pages</code>](<a href="https://pages.github.com/" target="_blank" rel="external">https://pages.github.com/</a><ul>
 <li>Setup <code>git remote</code> and <code>git branch</code> according to the official documentation!<ul>
 <li><code>.deploy_git</code> is the place where the automatic git commits go<br>) (set this to default branch to avoid further problems)</li>
@@ -397,7 +398,6 @@
 </ul>
 </li>
 <li>Setup <code>_config.yml</code> properly (Notes are down below)</li>
-<li><code>npm install</code>, crucial step, or the page build will fail…</li>
 </ul>
 </li>
 <li>Create a new article: <code>hexo new &quot;__ARTICLE_NAME__&quot;</code></li>
