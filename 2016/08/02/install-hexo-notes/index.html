@@ -96,7 +96,7 @@
 <meta property="og:url" content="https://henrybear327.github.io/2016/08/02/install-hexo-notes/index.html">
 <meta property="og:site_name" content="程式隨筆">
 <meta property="og:description" content="My Hexo setting notesJust random stuff, may be outdated.">
-<meta property="og:updated_time" content="2017-05-09T15:22:25.811Z">
+<meta property="og:updated_time" content="2017-05-09T15:23:05.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Installation Notes">
 <meta name="twitter:description" content="My Hexo setting notesJust random stuff, may be outdated.">
@@ -375,7 +375,6 @@
 <li>Install Hexo core components<ul>
 <li><code>sudo npm install hexo-cli -g</code></li>
 <li><code>npm install hexo-deployer-git --save</code>, so Hexo site deployment using git will work properly</li>
-<li><code>npm install</code>, crucial step, or the page build will fail…</li>
 </ul>
 </li>
 </ul>
@@ -384,7 +383,6 @@
 <li>Install Hexo core components<ul>
 <li><code>npm install hexo-cli -g</code></li>
 <li><code>npm install hexo-deployer-git --save</code>, so Hexo site deployment using git will work properly</li>
-<li><code>npm install</code>, crucial step, or the page build will fail…</li>
 </ul>
 </li>
 </ul>
@@ -399,10 +397,11 @@
 </ul>
 </li>
 <li>Setup <code>_config.yml</code> properly (Notes are down below)</li>
+<li><code>npm install</code>, crucial step, or the page build will fail…</li>
 </ul>
 </li>
 <li>Create a new article: <code>hexo new &quot;__ARTICLE_NAME__&quot;</code></li>
-<li>The <strong>most useful</strong> deployment command is <code>hexo generate --deploy</code></li>
+<li>The <strong>most useful</strong> deployment command is <code>hexo generate -d</code></li>
 <li>Some basic commands:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div><div class="line">hexo server</div></pre></td></tr></table></figure>
 </li>
 </ul>
