@@ -33,7 +33,7 @@ Just random stuff, may be outdated.
 
 * Create a new project:
   * run `hexo init __FOLDERNAME__` in the directory that you would like to save the Hexo project
-  * `cd` into `__FOLDERNAME__` and run `npm install`! $\rigtharrow$ crucial step, or the page build will fail...
+  * `cd` into `__FOLDERNAME__` and run `npm install`! $\rightarrow$ crucial step, or the page build will fail...
   * `git init` the project folder. __NOTICE__: All files to be displayed must be on [`gh-pages`](https://pages.github.com/
     * Setup `git remote` and `git branch` according to the official documentation!
       * `.deploy_git` is the place where the automatic git commits go
