@@ -269,6 +269,158 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/05/09/UbuntuInstallationNotes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Henry Tseng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/codingBlog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="程式隨筆">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/codingBlog/2017/05/09/UbuntuInstallationNotes/" itemprop="url">
+                  Ubuntu Installation Notes
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-09T23:05:36+08:00">
+                2017-05-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/codingBlog/categories/Ubuntu/" itemprop="url" rel="index">
+                    <span itemprop="name">Ubuntu</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Install-frequently-used-packages"><a href="#Install-frequently-used-packages" class="headerlink" title="Install frequently used packages"></a>Install frequently used packages</h1><p><code>sudo apt install vim git chromium-browser unity-tweak-tool astyle clang-format python3-pip</code></p>
+<h1 id="Install-oh-my-zsh"><a href="#Install-oh-my-zsh" class="headerlink" title="Install oh-my-zsh"></a>Install <code>oh-my-zsh</code></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt install zsh</div><div class="line">sh -c &quot;$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot;</div><div class="line">chsh -s `which zsh`</div></pre></td></tr></table></figure>
+<h1 id="Install-atom"><a href="#Install-atom" class="headerlink" title="Install atom"></a>Install atom</h1><p><code>sudo add-apt-repository ppa:webupd8team/atom &amp;&amp; sudo apt-get update &amp;&amp; sudo apt-get install atom</code></p>
+<h1 id="Setup-ssh-key"><a href="#Setup-ssh-key" class="headerlink" title="Setup ssh key"></a>Setup ssh key</h1><p><code>ssh-keygen -t rsa -b 4096 -C &quot;email&quot;</code></p>
+<h1 id="Install-Java-8"><a href="#Install-Java-8" class="headerlink" title="Install Java 8"></a>Install Java 8</h1><p><code>sudo add-apt-repository ppa:webupd8team/java &amp;&amp; sudo apt-get update &amp;&amp; sudo apt-get install oracle-java8-installer</code></p>
+<h1 id="Install-Eclipse-gt-get-Java-developer-version-from-download-packages"><a href="#Install-Eclipse-gt-get-Java-developer-version-from-download-packages" class="headerlink" title="Install Eclipse -&gt; get Java developer version from download packages"></a>Install Eclipse -&gt; get Java developer version from download packages</h1><p><code>http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neon3</code></p>
+<h1 id="Install-Docker"><a href="#Install-Docker" class="headerlink" title="Install Docker"></a>Install Docker</h1><p><code>https://download.docker.com/linux/ubuntu/dists/yakkety/pool/stable/amd64/</code><br><code>sudo dpkg -i [package name]</code></p>
+<h1 id="Install-Latex"><a href="#Install-Latex" class="headerlink" title="Install Latex"></a>Install Latex</h1><p><code>sudo apt install texlive-full texstudio python-pygments</code></p>
+<h1 id="Install-Pycharm"><a href="#Install-Pycharm" class="headerlink" title="Install Pycharm"></a>Install Pycharm</h1><h1 id="unity-tweak"><a href="#unity-tweak" class="headerlink" title="unity-tweak"></a>unity-tweak</h1><p>Change font to <code>noto sans CJK TC</code></p>
+<h1 id="ZSH-notes"><a href="#ZSH-notes" class="headerlink" title="ZSH notes"></a>ZSH notes</h1><p>zsh: corrupt history file /home/myusername/.zsh_history</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mv .zsh_history .zsh_history_bad</div><div class="line">strings .zsh_history_bad &gt; .zsh_history</div><div class="line">fc -R .zsh_history</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/05/08/UVA394/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1739,154 +1891,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://henrybear327.github.io/codingBlog/2017/05/01/dockerForSP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Henry Tseng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/codingBlog/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="程式隨筆">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/codingBlog/2017/05/01/dockerForSP/" itemprop="url">
-                  上系統程式課程所用的 Docker Image
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-01T21:35:58+08:00">
-                2017-05-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/codingBlog/categories/Docker/" itemprop="url" rel="index">
-                    <span itemprop="name">Docker</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>系統程式需要使用到 Ubuntu 環境，但是手頭上的電腦是 Unix-based 的 MacOS。實在是不想裝設虛擬機畢竟太佔空間，所以就來玩個 docker，效果真的奇佳！</p>
-<p>感謝<a href="https://github.com/peter0749">光宇</a>大大的神支援！讓這個 dockerfile 可以這麼完美。</p>
-<p>目前已經 deploy 到 <a href="https://hub.docker.com/r/henrybear327/dockerforsp/">DockerHub</a> 上，可以直接 pull 下來，不用自己 build 囉！</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/codingBlog/2017/05/01/dockerForSP/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1936,7 +1940,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/codingBlog/archives">
-                <span class="site-state-item-count">59</span>
+                <span class="site-state-item-count">60</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -1947,7 +1951,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/codingBlog/categories/index.html">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -1958,7 +1962,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/codingBlog/tags/index.html">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
