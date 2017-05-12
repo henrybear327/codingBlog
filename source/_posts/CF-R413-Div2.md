@@ -10,7 +10,7 @@ tags:
   - Math
 ---
 
-# [Playrix Codescapes Cup (Codeforces Round #413, rated, Div. 1 + Div. 2)]()
+# [Playrix Codescapes Cup (Codeforces Round #413, rated, Div. 1 + Div. 2)](http://codeforces.com/contest/799/)
 
 Problem A is a pretty good math problem :)
 
