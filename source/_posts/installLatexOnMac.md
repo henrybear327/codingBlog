@@ -9,7 +9,15 @@ date: 2016-10-01 23:51:33
 
 # Installation
 
+## Use `brew cask`
+
+The easiest way!
+
+`brew cask install mactex texstudio`
+
 ## Download packages:
+
+The hard way!
 
 1. [MacTex](http://www.tug.org/mactex/downloading.html)
 2. [TexStudio](http://texstudio.sourceforge.net)

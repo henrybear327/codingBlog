@@ -15,11 +15,12 @@ Just random stuff, may be outdated.
 
 ## Ubuntu
 
-* We will need to have [nodejs](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) and NPM installed
-  * `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+* We will need to have NPM and nodejs installed
+  * `curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -`
   * `sudo apt-get install -y nodejs`
+  * `sudo apt install npm`
 * Install Hexo core components
-  * `sudo npm install hexo-cli -g`
+  * `npm install hexo-cli -g`
   * `npm install hexo-deployer-git --save`, so Hexo site deployment using git will work properly
 
 ## Mac
@@ -33,14 +34,13 @@ Just random stuff, may be outdated.
 
 * Create a new project:
   * run `hexo init __FOLDERNAME__` in the directory that you would like to save the Hexo project
-  * `cd` into `__FOLDERNAME__` and run `npm install`! $\rightarrow$ crucial step, or the page build will fail...
   * `git init` the project folder. __NOTICE__: All files to be displayed must be on [`gh-pages`](https://pages.github.com/
     * Setup `git remote` and `git branch` according to the official documentation!
       * `.deploy_git` is the place where the automatic git commits go
 ) (set this to default branch to avoid further problems)
   * Setup `_config.yml` properly (Notes are down below)
 * Create a new article: `hexo new "__ARTICLE_NAME__"`
-* The __most useful__ deployment command is `hexo generate -d`
+* The __most useful__ deployment command is `hexo generate --deploy`
 * Some basic commands:
 ```
 hexo clean
