@@ -12,15 +12,15 @@ tags:
 
 # [Playrix Codescapes Cup (Codeforces Round #413, rated, Div. 1 + Div. 2)](http://codeforces.com/contest/799/)
 
-Problem A is a pretty good math problem :)
+A 不錯的數學題，但是不需要推公式就可做了... :)
 
 <!-- more -->
 
 ## Solution sketch
 
-這題第一次嘗試使數學公式解，然後就WA了一串 @@ 超級丟臉的。
+這題剛開始幾次 submissions 都嘗試使數學公式解，然後就WA了一串 @@ 超級丟臉的。
 
-後來AC做法是，開兩個計時器，一個算原本烤箱的，一個算新烤箱的。用greedy讓兩個烤箱時間差不超過t的情況下輪流工作即可。
+後來 AC 做法是，開兩個計時器，一個算原本烤箱的，一個算新烤箱的。用 greedy 的思維，讓兩個烤箱時間差不超過 $t$ 的情況下，輪流工作即可。 哭哭歐...
 
 ## AC code
 
