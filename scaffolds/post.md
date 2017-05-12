@@ -9,7 +9,7 @@ tags:
 
 # []()
 
-## Abridge problem statement
+## Abridged problem statement
 
 ## Solution sketch
 
