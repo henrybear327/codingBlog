@@ -18,7 +18,9 @@ Problem A is a pretty good math problem :)
 
 ## Solution sketch
 
+這題第一次嘗試使數學公式解，然後就WA了一串 @@ 超級丟臉的。
 
+後來AC做法是，開兩個計時器，一個算原本烤箱的，一個算新烤箱的。用greedy讓兩個烤箱時間差不超過t的情況下輪流工作即可。
 
 ## AC code
 
