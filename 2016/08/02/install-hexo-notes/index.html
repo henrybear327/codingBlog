@@ -96,7 +96,7 @@
 <meta property="og:url" content="https://henrybear327.github.io/2016/08/02/install-hexo-notes/index.html">
 <meta property="og:site_name" content="程式隨筆">
 <meta property="og:description" content="My Hexo setting notesJust random stuff, may be outdated.">
-<meta property="og:updated_time" content="2017-05-09T15:37:04.423Z">
+<meta property="og:updated_time" content="2017-05-01T13:33:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo Installation Notes">
 <meta name="twitter:description" content="My Hexo setting notesJust random stuff, may be outdated.">
@@ -367,13 +367,14 @@
         <h1 id="My-Hexo-setting-notes"><a href="#My-Hexo-setting-notes" class="headerlink" title="My Hexo setting notes"></a>My Hexo setting notes</h1><p>Just random stuff, may be outdated.</p>
 <a id="more"></a>
 <h1 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h1><h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><ul>
-<li>We will need to have <a href="https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions" target="_blank" rel="external">nodejs</a> and NPM installed<ul>
-<li><code>curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -</code></li>
+<li>We will need to have NPM and nodejs installed<ul>
+<li><code>curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -</code></li>
 <li><code>sudo apt-get install -y nodejs</code></li>
+<li><code>sudo apt install npm</code></li>
 </ul>
 </li>
 <li>Install Hexo core components<ul>
-<li><code>sudo npm install hexo-cli -g</code></li>
+<li><code>npm install hexo-cli -g</code></li>
 <li><code>npm install hexo-deployer-git --save</code>, so Hexo site deployment using git will work properly</li>
 </ul>
 </li>
@@ -389,7 +390,6 @@
 <h1 id="Hexo-Usage"><a href="#Hexo-Usage" class="headerlink" title="Hexo Usage"></a>Hexo Usage</h1><ul>
 <li>Create a new project:<ul>
 <li>run <code>hexo init __FOLDERNAME__</code> in the directory that you would like to save the Hexo project</li>
-<li><code>cd</code> into <code>__FOLDERNAME__</code> and run <code>npm install</code>! $\rightarrow$ crucial step, or the page build will fail…</li>
 <li><code>git init</code> the project folder. <strong>NOTICE</strong>: All files to be displayed must be on [<code>gh-pages</code>](<a href="https://pages.github.com/" target="_blank" rel="external">https://pages.github.com/</a><ul>
 <li>Setup <code>git remote</code> and <code>git branch</code> according to the official documentation!<ul>
 <li><code>.deploy_git</code> is the place where the automatic git commits go<br>) (set this to default branch to avoid further problems)</li>
@@ -401,7 +401,7 @@
 </ul>
 </li>
 <li>Create a new article: <code>hexo new &quot;__ARTICLE_NAME__&quot;</code></li>
-<li>The <strong>most useful</strong> deployment command is <code>hexo generate -d</code></li>
+<li>The <strong>most useful</strong> deployment command is <code>hexo generate --deploy</code></li>
 <li>Some basic commands:<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo generate</div><div class="line">hexo deploy</div><div class="line">hexo server</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -575,7 +575,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/codingBlog/tags/index.html">
-                <span class="site-state-item-count">52</span>
+                <span class="site-state-item-count">53</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
