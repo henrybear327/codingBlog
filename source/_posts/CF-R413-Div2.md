@@ -68,6 +68,8 @@ int main()
 
 比價的部份實作需要小心。
 
+順便欣賞一下 [tourist 的 code](http://codeforces.com/contest/799/submission/27019416) 吧～
+
 ### AC code
 
 ```c++
